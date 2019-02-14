@@ -1,14 +1,40 @@
-var myApp = angular.module('myApp', []);
-myApp.controller('MyController', function MyController($scope) {
-  $scope.username = {
-    "name":"Jack Terrell",
-    "username":"jterrell"
-  }
-  $scope.artist = {
-    "name":"Frankie Sinn",
-    "location":"Atlanta, GA",
-    "soundcloud":"",
-    "instagram":"",
-    "bio":""
-  }
-});
+//$(function(){
+//	var form = $('#register');
+//	var bigText = $('#big-text');
+//	var logoBox = $('#logo-box');
+//	var nav = $('.navigation');
+////	var logo = $('#logo');
+////	logo.fadeIn(500);
+////	logo.delay(1000);
+////	logo.animate({
+////		fontSize: "18px",
+////		marginTop: "20px"
+////	}, 5000, 'swing', function(){
+////			form.fadeIn(100);
+////			bigText.fadeIn(100);
+////			logoBox.slideDown(200);
+////	});
+//	$(window).scroll(function(){
+//		nav.slideDown(1000);
+//	});
+//});
+
+$(function(){
+	var logo = $("#logo");
+	logo.fadeIn(3000)
+		.delay(2000)
+		.slideUp(1000, "linear");
+	var nav = $('.navigation');
+	nav.delay(6000)
+		.slideDown(500);
+	var form = $('#register');
+	form.delay(6500)
+		.fadeIn(500);
+	var bigText = $('#big-text');
+	bigText.delay(6500)
+		.fadeIn(500);
+	var logoBox = $('#logo-box');
+	logoBox.delay(6500)
+		.slideDown(2000);
+	
+  });

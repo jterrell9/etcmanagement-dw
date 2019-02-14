@@ -127,6 +127,7 @@ body{
 	font-family: "Montserrat", sans-serif;
 }
 nav {
+	display: none;
 	position: fixed;
 	top: 0px;
 	width: 100%;
@@ -149,7 +150,14 @@ nav li:hover{
 }
 #top-bar{
 	width: 100%;
+}
+#logo{
+	display: none;
+	margin-top: 250px;
+	text-align: center;
 	color: white;
+	font-size: 200px; 
+	text-shadow: 0px 0px 100px #FF6F61;
 }
 #top-right{
 	width: 100%;
@@ -170,8 +178,10 @@ nav li:hover{
 	border-bottom: 1px solid #61ADD9;
 }
 #register{
+	display: none;
 	text-align: center;
 	color: white;
+	margin-top: 100px;
 }
 #register-form input{
 	border: 1px solid white;
@@ -199,6 +209,7 @@ nav li:hover{
 	cursor: pointer;
 }
 #big-text{
+	display: none;
 	text-align: center;
 	color: #FFFFFF;
 }
@@ -216,6 +227,7 @@ nav li:hover{
 	margin-bottom: 5px;
 }
 #logo-box{
+	display: none;
 	margin-top: 50px;
 	margin-bottom: 400px;
 	align-items: center;
