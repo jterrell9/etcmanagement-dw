@@ -179,6 +179,16 @@ nav li:hover{
 	background-color: white;
 	opacity: .75;
 }
+#registration{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	color: black;
+	margin-top: 100px;
+	padding: 20px 0px;
+	background-color: white;
+	opacity: .75;
+}
 /*
 #registration-container{
 	width: 600px;

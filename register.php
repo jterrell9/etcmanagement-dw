@@ -18,7 +18,12 @@
 
 <body>
 	<?php
-		include 'php/registration-form.php';
+	
+	if(passwordIsValid){
+		include 'php/landing-form.php';
+	}else{
+		include 'php/retry-registration.php';
+	}
 	?>
 
 	<!--[if lte IE 9]>
@@ -34,6 +39,13 @@
 	<section id="register">
 		<h1 style="margin: 0px;">Join Our Growing Team!</h1>
 		<p style="font-size: 10px; margin: 0px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+		<?php
+		
+		if(!$passwordIsValid){
+			echo '<p style="color: red;">*Passwords do not match!</p>';
+		}
+		
+		?>
 		<form name="register" id="register-form" method="post" onSubmit="php/registration-form.php" action="registered.php">
 			<table id="form-table">
 				<tr>
@@ -46,7 +58,7 @@
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="phone" style="margin: 0px 5px 0px 20px;">Phone:</label></td>
-					<td><input type="tel" name="phone" id="phone" size="40" required /></td>
+					<td><input type="tel" name="phone" id="phone" size="40" value="<?php echo $phone; ?>" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="password" style="margin: 0px 5px 0px 20px;">Password:</label></td>

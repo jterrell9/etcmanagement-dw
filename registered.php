@@ -31,9 +31,22 @@
 	</section>
 	
 <!--REGISTER-->
-	<section id="register">
-		<h1 style="margin: 0px;">Thank you for joining Etc. Management, <?php echo $name;?></h1>
+	<section id="registration">
+		<?php
 		
+		if($passwordIsValid){
+			echo '<h2>Thank you for joining Etc. Management,'.$name.'!</h2>';
+		}else{
+			echo '<h2>Sorry, your passwords did not match, please click below to try again</h2>';
+		}
+		
+		?>
+		<form method="post" action="register.php" onSubmit="php/retry-registration.php">
+			<input type="hidden" name="name" value="<?php echo $name; ?>">
+			<input type="hidden" name="email" value="<?php echo $email; ?>">
+			<input type="hidden" name="phone" value="<?php echo $phone; ?>">			
+			<button type="submit">Retry</button>
+		</form>
 	</section>
 	
 	
