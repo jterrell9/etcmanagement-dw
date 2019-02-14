@@ -22,19 +22,20 @@
 $(function(){
 	var logo = $("#logo");
 	logo.fadeIn(3000)
-		.delay(2000)
-		.slideUp(1000, "linear");
+		.delay(1000)
+		.slideUp(1000, 'linear');
 	var nav = $('.navigation');
-	nav.delay(6000)
+	nav.delay(5000)
 		.slideDown(500);
 	var form = $('#register');
-	form.delay(6500)
+	form.delay(5500)
 		.fadeIn(500);
 	var bigText = $('#big-text');
-	bigText.delay(6500)
+	bigText.delay(5500)
 		.fadeIn(500);
 	var logoBox = $('#logo-box');
-	logoBox.delay(6500)
+	logoBox.delay(5500)
 		.slideDown(2000);
-	
+	var flags = $('#flags');
+	flags.delay(10000).fadeIn(1000);
   });

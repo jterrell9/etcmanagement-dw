@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -22,36 +22,20 @@
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	 <![endif]-->
 
-<!--TOPBAR-->  
-	<section id="top-bar">
-<!--
-		<table style="width: 100%;">
-			<tr>
-				<td width="200px" class="honey-script">
--->
+<!--LOGO-->  
+	<section id="logo-container">
 		<div id="logo" class="honey-script">etc management</div>
-<!--
-				<td style="vertical-align: top">
-					<div id="top-right">
-						<span>My Account</span>
-					</div>
-				</td>
--->
-<!--
-			</tr>
-		</table>
--->
 	</section>
 	
 <!--REGISTER-->
 	<section id="register">
 		<h1 style="margin: 0px;">Join Our Growing Team!</h1>
 		<p style="font-size: 10px; margin: 0px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-		<form name="register" id="register-form" method="get" onSubmit="register.js">
+		<form name="register" id="register-form" method="post" onSubmit="php/landing-form.php" action="register.php">
 			<label for="name" style="margin: 0px 5px 0px 20px;">Name:</label>
-			<input type="text" name="name" id="name" required />
+			<input type="text" name="name" id="name" size="40" required />
 			<label for="email" style="margin: 0px 5px 0px 20px;">Email:</label>
-			<input type="email" name="email" id="email" />
+			<input type="email" name="email" id="email" size="40" required />
 			<button type="submit">Register</button>
 		</form>
 	</section>
@@ -80,11 +64,32 @@
 		</div>
 	</section>
 	
-	<!--NAVIGATION-->
+<!--FLAGS-->
+	<section id="flags">
+		<table id="flag-table">
+			<tr>
+				<td>
+					<img src="img/start-icon.png" alt="start-icon" />
+					<h3>start your brand</h3>
+				</td>
+				<td>
+					<img src="img/start-icon.png" alt="start-icon" />
+					<h3>start your brand</h3>
+				</td>
+				<td>
+					<img src="img/start-icon.png" alt="start-icon" />
+					<h3>start your brand</h3>
+				</td>
+			</tr>
+		</table>
+	</section>
+	
+	
+<!--NAVIGATION-->
 	<nav class="navigation">
 		<table width="100%">
 			<tr>
-				<td width="200px" class="honey-script"><div style="font-size: 40px; text-align: left; margin-left: 10px;">etc management</div></td>
+				<td width="200px" class="honey-script"><div id="homebutton"><a href="https://www.jackterrell.org/etcmanagement">etc management</a>x</div></td>
 				<td>
 					<ul>
 						<li><a href="#"><span>Services</span></a></li>
