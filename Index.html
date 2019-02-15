@@ -7,8 +7,8 @@
 	<meta name="description" content="etc management artist digital media promotions">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="controllers/normalize.css">
+	<link rel="stylesheet" href="views/landing/css/landing.css">
 	
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -17,95 +17,10 @@
 </head>
 
 <body>
-
-	<!--[if lte IE 9]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-	 <![endif]-->
-
-<!--LOGO-->  
-	<section id="logo-container">
-		<div id="logo" class="honey-script">etc management</div>
-	</section>
 	
-<!--REGISTER-->
-	<section id="register">
-		<h1 style="margin: 0px;">Join Our Growing Team!</h1>
-		<p style="font-size: 10px; margin: 0px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-		<form name="register" id="register-form" method="post" onSubmit="php/landing-form.php" action="register.php">
-			<label for="name" style="margin: 0px 5px 0px 20px;">Name:</label>
-			<input type="text" name="name" id="name" size="30" required />
-			<label for="email" style="margin: 0px 5px 0px 20px;">Email:</label>
-			<input type="email" name="email" id="email" size="30" required />
-			<button type="submit">Register</button>
-		</form>
-	</section>
-	
-<!--Big Text-->
-	<section id="big-text">
-		<br />
-		<h1>Branding · Consulting · Digital Marketing · Graphic Design</h1>
-		<h1>Artist Management · Music Marketing · Promotion</h1>
-		<br />
-	</section>
-	
-<!--LOGO BOX-->
-	<section id="logo-box">
-		<div style="width: 1250px;">
-			<table width="100%">
-				<tr>
-					<td><img src="img/etc-logo.png" alt="logo" height="250px"></td>
-					<td>
-						<h1>Fueled by a passion for BRANDING and driven by a desire to CHANGE the INDUSTRY...</h1>
-						<p>etc. Management is dedicated to the development, growth, and protection of their clients' freedom of creativity and their success as independent brands.</p>
-						<p>Weather you're a musician, band, promotion company, actor/ actress, dancer, or just general creative individual with an idea for an amazing brand, etc. Management has the tools and resources to help you make your digital marketing & branding goals achievable!</p>	
-					</td>
-				</tr>
-			</table>
-		</div>
-	</section>
-	
-<!--FLAGS-->
-	<section id="flags">
-		<table id="flag-table">
-			<tr>
-				<td>
-					<img src="img/start-icon.png" alt="start-icon" />
-					<h3>start your brand</h3>
-				</td>
-				<td>
-					<img src="img/start-icon.png" alt="start-icon" />
-					<h3>start your brand</h3>
-				</td>
-				<td>
-					<img src="img/start-icon.png" alt="start-icon" />
-					<h3>start your brand</h3>
-				</td>
-			</tr>
-		</table>
-	</section>
-	
-	
-<!--NAVIGATION-->
-	<nav class="navigation">
-		<table width="100%">
-			<tr>
-				<td width="200px" class="honey-script"><div id="homebutton"><a href="https://www.jackterrell.org/etcmanagement">etc management</a>x</div></td>
-				<td>
-					<ul>
-						<li><a href="#"><span>Services</span></a></li>
-						<li><a href="#"><span>Artists</span></a></li>
-						<li><a href="#"><span>Blog</span></a></li>
-						<li><a href="#"><span>Contact</span></a></li>
-						<li class="account"><a href="#"><span>My Account</span></a></li>
-					</ul>
-				</td>
-			</tr>
-		</table>
-	</nav>
-
-<!--SCRIPTS-->
-	<script src="lib/jquery-3.3.1.min.js"></script>
-	<script src="js/main.js"></script>
+	<script>
+		window.location = "/views/landing/landing.html";
+	</script>
 	
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 	<script>

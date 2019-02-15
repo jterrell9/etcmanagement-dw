@@ -107,21 +107,21 @@ a:visited{
 }
 @font-face {
 	font-family: "Honey Script";
-	src: url('../fonts/HoneyScript-Light.ttf') format('truetype');
+	src: url('../../../assets/fonts/HoneyScript-Light.ttf') format('truetype');
 }
 .honey-script{
 	font-family: "Honey Script", cursive;
 }
 @font-face{
 	font-family: "Bosthon Brush";
-	src: url("../fonts/BOSThONBRUSH.otf") format("opentype");
+	src: url("../../../assets/fonts/BOSTHONBRUSH.otf") format("opentype");
 }
 .bosthon-brush{
 	font-family: "Bosthon Brush";
 }
 body{
 	margin: 0px;
-	background-image: url("../img/bg-registration.jpg");
+	background-image: url("../../../assets/img/bg-registration.jpg");
 	background-repeat: no-repeat;
 	background-color: black;
 	font-family: "Montserrat", sans-serif;
