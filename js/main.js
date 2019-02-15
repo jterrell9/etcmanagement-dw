@@ -23,7 +23,7 @@ $(function(){
 	var logo = $("#logo");
 	logo.fadeIn(3000)
 		.delay(1000)
-		.slideUp(1000, 'linear');
+		.fadeOut(1000);
 	var nav = $('.navigation');
 	nav.delay(5000)
 		.slideDown(500);

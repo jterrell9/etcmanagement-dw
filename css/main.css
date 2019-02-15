@@ -198,7 +198,7 @@ nav li:hover{
 	background-image: linear-gradient(180deg,
         #626262, 
         #7D7D7D 70%,
-        #CFCFCF );
+        #FFDA29 );
 	color: white;
 	font-family: "Montserrat", sans-serif;
 	border: 1px solid black;
@@ -246,6 +246,7 @@ nav li:hover{
 #flags{
 	display: none;
 	margin-top: 30px;
+	color: white;
 }
 #flag-table{
 	margin: 0 auto;
