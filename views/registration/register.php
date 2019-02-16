@@ -7,7 +7,7 @@
 	<meta name="description" content="etc management artist digital media promotions">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="../../controllers/normalize.css">
+	<link rel="stylesheet" href="../../controllers/css/normalize.css">
 	<link rel="stylesheet" href="css/registration.css">
 	
 	<!--FONTS-->
@@ -37,7 +37,7 @@
 		<p style="font-size: 10px; margin: 0px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 		<?php
 		
-		if(!$passwordIsValid){
+		if(!$isValid){
 			echo '<p style="color: red;">*Passwords do not match!</p>';
 		}
 		
@@ -45,8 +45,20 @@
 		<form name="register" id="register-form" method="post" onSubmit="php/registration-form.php" action="registered.php">
 			<table id="form-table">
 				<tr>
-					<td class="label-cell"><label for="name" style="margin: 0px 5px 0px 20px;">Name:</label></td>
-					<td><input type="text" name="name" id="name" size="40"  value="<?php echo $name; ?>" required /></td>
+					<td class="label-cell"><label for="artist-comp-name" style="margin: 0px 5px 0px 20px;">Artist/Company Name:</label></td>
+					<td><input type="text" name="artist-comp-name" id="artist-comp-name" size="40"  value="<?php echo $artistName; ?>" required /></td>
+				</tr>
+				<tr>
+					<td class="label-cell"><label for="instagram" style="margin: 0px 5px 0px 20px;">Instagram Name:</label></td>
+					<td><input type="text" name="instagram" id="instagram" size="40" value="<?php echo $instagram; ?>" required /></td>
+				</tr>
+				<tr>
+					<td class="label-cell"><label for="fname" style="margin: 0px 5px 0px 20px;">First Name:</label></td>
+					<td><input type="text" name="fname" id="fname" size="40" value="<?php echo $fname; ?>" required /></td>
+				</tr>
+				<tr>
+					<td class="label-cell"><label for="lname" style="margin: 0px 5px 0px 20px;">Last Name:</label></td>
+					<td><input type="text" name="lname" id="lname" size="40" value="<?php echo $lname; ?>" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="email" style="margin: 0px 5px 0px 20px;">Email:</label></td>

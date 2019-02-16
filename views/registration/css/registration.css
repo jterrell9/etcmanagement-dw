@@ -126,30 +126,6 @@ body{
 	background-color: black;
 	font-family: "Montserrat", sans-serif;
 }
-/*
-nav {
-	display: none;
-	position: fixed;
-	top: 0px;
-	width: 100%;
-	background: linear-gradient(135deg, #e0ffff 0%,#45b5aa 100%);
-	text-align: right;
-}
-nav ul{
-	margin: 0;
-	padding: 20px;
-	list-style: none;
-	white-space:nowrap;
-}
-nav li{
-	padding: 20px;
-	display: inline;
-}
-nav li:hover{
-	cursor: pointer;
-	color: white;
-}
-*/
 #logo-container{
 	width: 100%;
 }
@@ -225,7 +201,6 @@ nav li:hover{
         #626262, 
         #7D7D7D 80%,
         #CFCFCF );
-/*	background: linear-gradient(135deg,  0%,#ff6f61 30%,#ff4130 100%);*/
 	color: white;
 	font-family: "Montserrat", sans-serif;
 	border: 1px solid black;

@@ -1,9 +1,12 @@
 <?php
 
-$name = filter_input(INPUT_POST, 'name');
+$artistName = filter_input(INPUT_POST, 'artist-comp-name');
 $email = filter_input(INPUT_POST, 'email');
-$phone = "";
+$instagram = '';
+$fname = '';
+$lname = '';
+$phone = '';
 
-$passwordIsValid = true;
+$isValid = true;
 
 ?>

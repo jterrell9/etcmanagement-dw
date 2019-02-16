@@ -131,7 +131,10 @@ nav {
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	background: linear-gradient(135deg, #e0ffff 0%,#45b5aa 100%);
+	background: #ffd4d1;
+	background: -moz-linear-gradient(-45deg, #ffd4d1 0%, #ff6f61 40%, #ff6f61 78%, #ffd4d1 100%);
+	background: -webkit-linear-gradient(-45deg, #ffd4d1 0%,#ff6f61 40%,#ff6f61 78%,#ffd4d1 100%);
+	background: linear-gradient(135deg, #ffd4d1 0%,#ff6f61 40%,#ff6f61 78%,#ffd4d1 100%);
 	text-align: right;
 }
 nav ul{
@@ -197,8 +200,8 @@ nav li:hover{
 	padding: 5px 10px;
 	background-image: linear-gradient(180deg,
         #626262, 
-        #7D7D7D 70%,
-        #FFDA29 );
+        #7D7D7D 80%,
+        #CFCFCF );
 	color: white;
 	font-family: "Montserrat", sans-serif;
 	border: 1px solid black;
@@ -230,12 +233,12 @@ nav li:hover{
 	display: none;
 	margin-top: 50px;
 	align-items: center;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9993+0,ff6f61+30,ff4130+100 */
-	background: #ff9993; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #ff9993 0%, #ff6f61 30%, #ff4130 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, #ff9993 0%,#ff6f61 30%,#ff4130 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, #ff9993 0%,#ff6f61 30%,#ff4130 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9993', endColorstr='#ff4130',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: #63ffef;
+	background: -moz-linear-gradient(-45deg, #63ffef 0%, #45b5aa 40%, #45b5aa 78%, #63ffef 100%);
+	background: -webkit-linear-gradient(-45deg, #63ffef 0%,#45b5aa 40%,#45b5aa 78%,#63ffef 100%);
+	background: linear-gradient(135deg, #63ffef 0%,#45b5aa 40%,#45b5aa 78%,#63ffef 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63ffef', endColorstr='#63ffef',GradientType=1 );
+
 }
 #homebutton{
 	cursor: pointer;

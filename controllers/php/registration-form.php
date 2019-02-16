@@ -1,13 +1,15 @@
 <?php
-
-$name = filter_input(INPUT_POST, 'name');
+$artistName = filter_input(INPUT_POST, 'artist-comp-name');
+$instagram = filter_input(INPUT_POST, 'instagram');
+$fname = filter_input(INPUT_POST, 'fname');
+$lname = filter_input(INPUT_POST, 'lname');
 $email = filter_input(INPUT_POST, 'email');
 $phone = filter_input(INPUT_POST, 'phone');
 $password = filter_input(INPUT_POST, 'password');
 $retype = filter_input(INPUT_POST, 'password-retype');
 if($password != $retype){
-	$passwordIsValid = false;
+	$isValid = false;
 }else{
-	$passwordIsValid = true;
+	$isValid = true;
 }
 ?>
