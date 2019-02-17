@@ -13,7 +13,15 @@
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-	<meta name="theme-color" content="#fafafa">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134328256-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-134328256-1');
+	</script>
 </head>
 
 <body>
@@ -29,19 +37,29 @@
 		include '../../models/mysql-connect.php';
 		include '../../controllers/php/registration-form.php';
 		
+		
+		
 		if(!$isConnected){
 			echo '<p style="color: red">*error connecting to database<p>'."\r\n".
 				'<p>please try again later...</p>'."\r\n".
 				'<p>'.$errorMessage.'</p>'."\r\n";
 		}else{
 			if($isValid){
+				include '../../controllers/openSSL.php';
+				include '../../models/addMember.php';
+				
+				$passwordSSL = encrypt($password);
+				
+				
 				echo '<h2>Thank you for joining Etc. Management, '.$fname.'!</h2>';
-				echo '<p>Please check your email to confirm your account</p>';
+				echo '<p>Please check your email to confirm your account'."\r\n".
+						'<br />sure to check your spam folder if it does not appear in your inbox.</p>'."\r\n".
+						'<p style="color: red">Do not hit refresh or press back button</p>';
 
 				$subject1 = 'Welcome '.$fname.' to the Etc Family!';
-				$message1 = 'Hello '.$fname.' '.$lname.",\r\n".
-					'We are so glad you decided to take a big step in digital media marketing.  We have wonderful services available to you so that you can grow your brand as an artist.  Please take this opportunity to view these services on our website, and explore your user portal.'."\r\n".
-					"\t".'Sincerely,'."\r\n\t".'Etc Management team';
+				$message1 = 'Hello '.$fname.' '.$lname.",\r\n\r\n\t".
+					'We are so glad you decided to take a big step in digital media marketing.  We have wonderful services available to you so that you can grow your brand as an artist.  Please take this opportunity to view these services on our website, and explore your user portal.'."\r\n\r\n\t".
+					'Sincerely,'."\r\n\t".'Etc Management team';
 				$headers1 = 'From: etcmanagement@jackterrell.org' . "\r\n" .
 							'Reply-To: etcmanagement@jackterrell.org' . "\r\n" .
 							'X-Mailer: PHP/' . phpversion();

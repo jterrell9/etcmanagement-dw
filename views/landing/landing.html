@@ -10,10 +10,18 @@
 	<link rel="stylesheet" href="../../controllers/normalize.css">
 	<link rel="stylesheet" href="css/landing.css">
 	
-	<!--FONTS-->
+<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-	<meta name="theme-color" content="#fafafa">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134328256-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-134328256-1');
+	</script>
 </head>
 
 <body>
@@ -29,9 +37,9 @@
 		<p style="font-size: 10px; margin: 0px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 		<form name="register" id="register-form" method="post" onSubmit="../../controllers/php/landing-form.php" action="../registration/register.php">
 			<label for="artist-comp-name" style="margin: 0px 5px 0px 20px;">Artist/Company Name:</label>
-			<input type="text" name="artist-comp-name" id="artist-comp-name" size="30" required />
+			<input type="text" name="artist-comp-name" id="artist-comp-name" size="30" maxlength="40" required />
 			<label for="email" style="margin: 0px 5px 0px 20px;">Email:</label>
-			<input type="email" name="email" id="email" size="30" required />
+			<input type="email" name="email" id="email" size="30" maxlength="60" required />
 			<button type="submit">Register</button>
 		</form>
 	</section>

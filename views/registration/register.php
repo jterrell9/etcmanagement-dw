@@ -12,8 +12,16 @@
 	
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134328256-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	<meta name="theme-color" content="#fafafa">
+		gtag('config', 'UA-134328256-1');
+	</script>
 </head>
 
 <body>
@@ -35,6 +43,8 @@
 	<section id="register">
 		<h1 style="margin: 0px;">Join Our Growing Team!</h1>
 		<p style="font-size: 10px; margin: 0px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+		<p>We are doing all we can to keep your account secure, but even the best security means nothing without a secure password.
+		<br />So please use at least </p>
 		<?php
 		
 		if(!$isValid){
@@ -46,35 +56,35 @@
 			<table id="form-table">
 				<tr>
 					<td class="label-cell"><label for="artist-comp-name" style="margin: 0px 5px 0px 20px;">Artist/Company Name:</label></td>
-					<td><input type="text" name="artist-comp-name" id="artist-comp-name" size="40"  value="<?php echo $artistName; ?>" required /></td>
+					<td><input type="text" name="artist-comp-name" id="artist-comp-name" size="40"  maxlength="40" value="<?php echo $artistName; ?>" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="instagram" style="margin: 0px 5px 0px 20px;">Instagram Name:</label></td>
-					<td><input type="text" name="instagram" id="instagram" size="40" value="<?php echo $instagram; ?>" required /></td>
+					<td><input type="text" name="instagram" id="instagram" size="40" maxlength="40" value="<?php echo $instagram; ?>" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="fname" style="margin: 0px 5px 0px 20px;">First Name:</label></td>
-					<td><input type="text" name="fname" id="fname" size="40" value="<?php echo $fname; ?>" required /></td>
+					<td><input type="text" name="fname" id="fname" size="40" maxlength="40" value="<?php echo $fname; ?>" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="lname" style="margin: 0px 5px 0px 20px;">Last Name:</label></td>
-					<td><input type="text" name="lname" id="lname" size="40" value="<?php echo $lname; ?>" required /></td>
+					<td><input type="text" name="lname" id="lname" size="40" maxlength="40" value="<?php echo $lname; ?>" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="email" style="margin: 0px 5px 0px 20px;">Email:</label></td>
-					<td><input type="email" name="email" id="email" size="40" value="<?php echo $email; ?>" required /></td>
+					<td><input type="email" name="email" id="email" size="40" maxlength="60" value="<?php echo $email; ?>" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="phone" style="margin: 0px 5px 0px 20px;">Phone:</label></td>
-					<td><input type="tel" name="phone" id="phone" size="40" value="<?php echo $phone; ?>" required /></td>
+					<td><input type="tel" name="phone" id="phone" size="40" maxlength="10" value="<?php echo $phone; ?>" /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="password" style="margin: 0px 5px 0px 20px;">Password:</label></td>
-					<td><input type="password" name="password" id="password" size="40" required /></td>
+					<td><input type="password" name="password" id="password" size="40" maxlength="40" required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="password-retype" style="margin: 0px 5px 0px 20px;">Retype Password:</label></td>
-					<td><input type="password" name="password-retype" id="password-retype" size="40" required/></td>
+					<td><input type="password" name="password-retype" id="password-retype" size="40" maxlength="40"  required/></td>
 				</tr>
 				<tr>
 					<td colspan="2" id="button-cell"><button type="submit">Register</button></td>

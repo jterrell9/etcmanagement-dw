@@ -1,7 +1,7 @@
 <?php
 $sConnected = false;
 try{
-	$dsn = 'mysql:host=localhost;dbname=jterrell_users';
+	$dsn = 'mysql:host=localhost;dbname=jterrell_etc-users';
 	$dbUsername = 'jterrell_etc';
 	$dbPassword = '6RgVeJQ$(@TL';
 	$db = new PDO($dsn,$dbUsername,$dbPassword);
