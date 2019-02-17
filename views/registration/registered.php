@@ -37,7 +37,7 @@
 		include '../../models/mysql-connect.php';
 		include '../../controllers/php/registration-form.php';
 		
-		
+		$dbLink = connectMySQL();
 		
 		if(!$isConnected){
 			echo '<p style="color: red">*error connecting to database<p>'."\r\n".
@@ -47,6 +47,8 @@
 			if($isValid){
 				include '../../controllers/openSSL.php';
 				include '../../models/addMember.php';
+				
+				addMember($artistName, $fname, $lname, $email, $instagram, $phone, $password);
 				
 				$passwordSSL = encrypt($password);
 				
