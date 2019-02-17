@@ -1,0 +1,5 @@
+CREATE TABLE phone(
+	member_id SMALLINT UNSIGNED NOT NULL,
+	phone VARCHAR(10) NOT NULL,
+	FOREIGN KEY(member_id) REFERENCES members
+);
