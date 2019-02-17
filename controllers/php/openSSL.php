@@ -1,6 +1,6 @@
 <!--uses openSSL encrption to encryptand decrypt passwords and other sensitive data-->
 <?php
-$KEY = base64_encode(file_get_contents('/home1/jterrell/etcmanagment-config/.conf/globals.php'));
+$KEY = base64_encode(file_get_contents('/home1/jterrell/etcmanagment-config/.conf/secret.key'));
 function encrypt($plaintext){
 	$ivlen = openssl_cipher_iv_length($cipher="AES-128-CBC");
 	$iv = openssl_random_pseudo_bytes($ivlen);
