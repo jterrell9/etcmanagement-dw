@@ -1,4 +1,7 @@
 <!doctype html>
+
+<!--REGISTRATION PAGE-->
+
 <html lang="en">
 
 <head>
