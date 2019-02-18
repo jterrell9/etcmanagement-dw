@@ -1,23 +1,4 @@
-//$(function(){
-//	var form = $('#register');
-//	var bigText = $('#big-text');
-//	var logoBox = $('#logo-box');
-//	var nav = $('.navigation');
-////	var logo = $('#logo');
-////	logo.fadeIn(500);
-////	logo.delay(1000);
-////	logo.animate({
-////		fontSize: "18px",
-////		marginTop: "20px"
-////	}, 5000, 'swing', function(){
-////			form.fadeIn(100);
-////			bigText.fadeIn(100);
-////			logoBox.slideDown(200);
-////	});
-//	$(window).scroll(function(){
-//		nav.slideDown(1000);
-//	});
-//});
+//JQuery for site animation upon document load
 
 $(function(){
 	var logo = $("#logo");
