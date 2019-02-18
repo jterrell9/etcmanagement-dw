@@ -6,6 +6,8 @@
 	<title>etc management</title>
 	<meta name="description" content="etc management artist digital media promotions">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="icon" type="image/png" href="../../assets/img/etc-favicon.png">
 
 	<link rel="stylesheet" href="../../controllers/css/normalize.css">
 	<link rel="stylesheet" href="css/registration.css">
