@@ -124,7 +124,7 @@ body{
 	background-image: url("../../../assets/img/bg.jpg");
 	background-repeat: no-repeat;
 	background-color: black;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Quicksand', sans-serif;
 }
 nav {
 	display: none;
@@ -132,9 +132,10 @@ nav {
 	top: 0px;
 	width: 100%;
 	background: #ffd4d1;
-	background: -moz-linear-gradient(-45deg, #ffd4d1 0%, #ff6f61 40%, #ff6f61 78%, #ffd4d1 100%);
-	background: -webkit-linear-gradient(-45deg, #ffd4d1 0%,#ff6f61 40%,#ff6f61 78%,#ffd4d1 100%);
-	background: linear-gradient(135deg, #ffd4d1 0%,#ff6f61 40%,#ff6f61 78%,#ffd4d1 100%);
+	background: -moz-linear-gradient(-45deg, #ffd4d1 0%, #ff6f61 100%);
+	background: -webkit-linear-gradient(-45deg, #ffd4d1 0%,#ff6f61 100%);
+	background: linear-gradient(135deg, #ffd4d1 0%,#ff6f61 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd4d1', endColorstr='#ff6f61',GradientType=1 );
 	text-align: right;
 }
 nav ul{
@@ -151,8 +152,10 @@ nav li:hover{
 	cursor: pointer;
 	color: white;
 }
-#top-bar{
-	width: 100%;
+nav #homebutton{
+	font-size: 40px; 
+	text-align: left; 
+	margin-left: 10px;
 }
 #logo{
 	display: none;
@@ -162,28 +165,13 @@ nav li:hover{
 	font-size: 200px; 
 	text-shadow: 0px 0px 100px #FF6F61;
 }
-#top-right{
-	width: 100%;
-	text-align: right;
-	margin-right: 50px;
-}
-#top-right span{
-	position: relative;
-	right: 20px;
-	top: 10px;
-	border-bottom: 1px solid white;
-	font-family: Arial;
-	font-size: 14px;
-	cursor: pointer;
-}
-#top-right span:hover{
-	color: #61ADD9;
-	border-bottom: 1px solid #61ADD9;
-}
 #register{
 	display: none;
 	text-align: center;
 	color: white;
+	margin-top: 100px;
+}
+#register-form{
 	margin-top: 100px;
 }
 #register-form input{
@@ -203,7 +191,6 @@ nav li:hover{
         #7D7D7D 80%,
         #CFCFCF );
 	color: white;
-	font-family: "Montserrat", sans-serif;
 	border: 1px solid black;
 	border-radius: 5px;
 }
@@ -214,7 +201,8 @@ nav li:hover{
 #big-text{
 	display: none;
 	text-align: center;
-	color: #FFFFFF;
+	color: white;
+	margin-top: 100px;
 }
 #big-text h1{
 	font-family: "Bosthon Brush";
@@ -231,7 +219,7 @@ nav li:hover{
 }
 #logo-box{
 	display: none;
-	margin-top: 50px;
+	margin-top: 30px;
 	align-items: center;
 	background: #63ffef;
 	background: -moz-linear-gradient(-45deg, #63ffef 0%, #45b5aa 40%, #45b5aa 78%, #63ffef 100%);
@@ -239,12 +227,6 @@ nav li:hover{
 	background: linear-gradient(135deg, #63ffef 0%,#45b5aa 40%,#45b5aa 78%,#63ffef 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63ffef', endColorstr='#63ffef',GradientType=1 );
 
-}
-#homebutton{
-	cursor: pointer;
-	font-size: 40px; 
-	text-align: left; 
-	margin-left: 10px;
 }
 #flags{
 	display: none;

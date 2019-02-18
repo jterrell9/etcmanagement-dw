@@ -36,6 +36,6 @@ $(function(){
 	var logoBox = $('#logo-box');
 	logoBox.delay(5500)
 		.slideDown(2000);
-	var flags = $('#flags');
-	flags.delay(10000).fadeIn(1000);
+//	var flags = $('#flags');
+//	flags.delay(10000).fadeIn(1000);
   });
