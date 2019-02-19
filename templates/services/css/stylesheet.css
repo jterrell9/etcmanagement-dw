@@ -189,7 +189,7 @@ nav #homebutton{
 	display: none;
 	text-align: center;
 	color: black;
-	margin-top: 50px;
+	margin: 50px 0px;
 	background: white;
 	opacity: .75;
 }
@@ -197,8 +197,19 @@ nav #homebutton{
 	display: inline-block;
 	opacity: 1;
 }
+#services-table td{
+	width: 250px;
+	overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+}
 #services img{
 	cursor: pointer;
+}
+#copyright{
+	display: none;
+	color: white;
+	margin-left: 20px;
 }
 
  /* ==========================================================================
