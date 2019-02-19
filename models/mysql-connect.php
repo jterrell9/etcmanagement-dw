@@ -1,18 +1,15 @@
 <!--This script connects to the MySQL database-->
 <?php
-$sConnected = false;
-$dbLink = null;
+$isConnected = false;
+$dsn = 'mysql:host=localhost;dbname=jterrell_etc-users';
+$dbUsername = 'jterrell_etc';
+$dbPassword = '';
 try{
-	$dsn = 'mysql:host=localhost;dbname=jterrell_etc-users';
-	$dbUsername = 'jterrell_etc';
-	$dbPassword = '6RgVeJQ$(@TL';
 	$dbLink = new PDO($dsn,$dbUsername,$dbPassword);
+	echo "<script>console.log('MySQL connection successful')</script>";
 	$isConnected = true;
-}catch(PDOException $e) {
-	$errorMessage = $e->getMessage();
-	echo '<script>console.log('.$errorMessage.')</script>';
-}catch(Exception $e){
-	$errorMessage = $e->getMessage();
-	echo '<script>console.log("errorMessage")</script>';
+}catch(PDOException $e){
+	echo "<script>console.log('".$e->getMessage()."')</script>";
+	$isConnected = false;
 }
 ?>
