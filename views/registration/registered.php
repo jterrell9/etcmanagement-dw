@@ -94,5 +94,7 @@
 	ga('create', 'UA-134328256-1', 'auto'); ga('send', 'pageview')
 	</script>
 </body>
-
+<footer>
+	<div id="copyright">&#169; Etc. Management 2019</div>
+</footer>
 </html>

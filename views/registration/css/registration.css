@@ -210,7 +210,11 @@ body{
 	border: 1px solid #B7B7B7;
 	cursor: pointer;
 }
-
+#copyright{
+	color: white;
+	margin: 20px;
+	
+}
 
  /* ==========================================================================
    Helper classes
