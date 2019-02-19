@@ -197,6 +197,9 @@ nav #homebutton{
 	display: inline-block;
 	opacity: 1;
 }
+#services img{
+	cursor: pointer;
+}
 
  /* ==========================================================================
    Helper classes

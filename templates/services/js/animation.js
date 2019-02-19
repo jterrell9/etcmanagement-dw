@@ -15,11 +15,17 @@ $(function(){
 	services.delay(5000)
 			.slideDown(500);
 	
+	var growthCell = $('#growth-cell');
 	var growthIcon = $('#growth-icon');
-	growthIcon.mouseover(function(){
-		growthIcon.attr('src','assets/img/growth-icon_white.png');
+	var growthText = $('#growth-text');
+	growthCell.mouseover(function(){
+		growthIcon.attr('src','assets/img/growth-icon_hover.png');
+		growthText.css('color','#FFDA29');
+		growthText.css('text-shadow','1px 1px 1px black');
 	});
-	growthIcon.mouseleave(function(){
+	growthCell.mouseleave(function(){
 		growthIcon.attr('src','assets/img/growth-icon.png');
+		growthText.css('color','black');
+		growthText.css('text-shadow','none');
 	});
 });
