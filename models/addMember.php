@@ -20,7 +20,7 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 	$isConnected = false;
 	$dsn = 'mysql:host=localhost;dbname=jterrell_etc-users';
 	$dbUsername = 'jterrell_etc';
-	$dbPassword = file_get_contents('/home1/jterrell/etcmanagment-config/.conf/mysql.key')
+	$dbPassword = file_get_contents('/home1/jterrell/etcmanagment-config/.conf/mysql.key');
 	try{
 		$dbLink = new PDO($dsn,$dbUsername,$dbPassword);
 		echo "<script>console.log('MySQL connection successful')</script>";
@@ -30,11 +30,12 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 		$isConnected = false;
 	}
 	
-	$accountAlreadyExists = false;
 	if($isConnected){
+		
 		//encrypt password
 		$passwordHash = encrypt($password);
 		echo "<script>console.log(\"password encrypted using openSSL\")</script>"."\r\n";
+		
 		//store input data in array
 		$member = [
 			'group_name' => $group_name,
@@ -49,6 +50,7 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 		];
 		
 		//check databases for a record with the same email
+		$accountAlreadyExists = false;
 		$sql = 'SELECT email FROM members WHERE email='.$member['email'];
 		try{
 			$statement = $dbLink->prepare($sql);
@@ -67,7 +69,7 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 		}
 
 		//insert registration form data into members table
-		$sql = "INSERT INTO members (account_type, group_name, fname, lname, email) ".
+		$sql = "INSERT INTO members (account_type_id, group_name, fname, lname, email) ".
 			"VALUES (2, :group_name, :fname, :lname, :email)";
 		try{
 			$statement = $dbLink->prepare($sql);
@@ -80,21 +82,8 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 		}catch(PDOException $e){
 			echo "<script>console.log('".$e->getMessage()."')</script>";
 		}
-		$member_id = $dbLink->insert_id;
-		//get member_id of current entry
-//		$sql = "SELECT memeber_id FROM members WHERE email=".$member['email'];
-//		try{
-//			$statement = $dbLink->prepare($sql);
-//			$statement->execute();
-//			echo "<script>console.log(\"".$sql."\");</script>";
-//			$result = $statement->fetchColumn(0);
-//			$member_id;
-//			echo "<script>console.log(\""."member_id: ".$member_id."\");</script>";
-//			$statement->closeCursor();
-//		}catch(PDOException $e){
-//			$member_id = null;
-//			echo "<script>console.log('".$e->getMessage()."')</script>";
-//		}
+		$member_id = (int)$dbLink->lastInsertId();
+		echo "<script>console.log('member-id: ".$member_id."');</script>";
 		
 		//insert instagram name into instagram table
 		$sql = "INSERT INTO instagram (member_id, instagram_name) ".
