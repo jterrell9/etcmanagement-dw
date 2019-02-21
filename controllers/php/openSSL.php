@@ -7,9 +7,9 @@ function encrypt($plaintext){
 	$ciphertext_raw = openssl_encrypt($plaintext, $cipher, $KEY, $options=OPENSSL_RAW_DATA, $iv);
 	$hmac = hash_hmac('sha256', $ciphertext_raw, $KEY, $as_binary=true);
 	return [
-		"iv" => $iv,
-		"hmac" => $hmac,
-		"ciphertext" => $ciphertext_raw,
+		"iv" => base64_encode($iv),
+		"hmac" => base64_encode($hmac),
+		"ciphertext" => base64_encode($ciphertext_raw),
 	];
 }
 
