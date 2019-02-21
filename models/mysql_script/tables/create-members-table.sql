@@ -1,8 +1,10 @@
 CREATE TABLE members(
 	member_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	account_type_id SMALLINT UNSIGNED NOT NULL,
 	group_name VARCHAR(40) NOT NULL,
 	fname VARCHAR(40) NOT NULL,
 	lname VARCHAR(40) NOT NULL,
 	email VARCHAR(60) NOT NULL UNIQUE,
-	PRIMARY KEY(member_id)
+	PRIMARY KEY(member_id),
+	FOREIGN KEY(account_type_id) REFERENCES acount_type
 );

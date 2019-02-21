@@ -1,7 +1,7 @@
 CREATE TABLE login(
 	member_id SMALLINT UNSIGNED NOT NULL,
-	iv BINARY(16) NOT NULL,
-	hmac BINARY(32) NOT NULL,
-	hash_password BINARY(32) NOT NULL,
+	iv VARCHAR(64) NOT NULL,
+	hmac VARCHAR(128) NOT NULL,
+	hash_password VARCHAR(64) NOT NULL,
 	FOREIGN KEY(member_id) REFERENCES members
 );
