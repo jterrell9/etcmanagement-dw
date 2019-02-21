@@ -41,32 +41,14 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 			'group_name' => $group_name,
 			'fname' => $fname,
 			'lname' => $lname,
-			'email' => "'".$email."'",
+			'email' => $email,
 			'instagram_name' => $instagram,
 			'phone' => $phone,
 			'iv' => $passwordHash['iv'],
 			'hmac' => $passwordHash['hmac'],
 			'hash_password' => $passwordHash['ciphertext'],
 		];
-		
-		//check databases for a record with the same email
-		$accountAlreadyExists = false;
-		$sql = 'SELECT email FROM members WHERE email='.$member['email'];
-		try{
-			$statement = $dbLink->prepare($sql);
-			$statement->execute();
-			echo "<script>console.log(\"".$sql."\")</script>"."\r\n";
-			$result = $statement->fetchColumn(0);
-			$statement->closeCursor();
-			if(!empty($result)){
-				$accountAlreadyExists = true;
-				echo '<script>console.log("Account for '.$member['email'].' already exists.");</script>'."\r\n";
-				return;
-			}
-			echo '<script>console.log("No account exists for '.$member['email'].'");</script>'."\r\n";	
-		}catch(PDOException $e){
-			echo "<script>console.log('".$e->getMessage()."')</script>";
-		}
+		echo "<script>console.log(\"instagram: ".$member['instagram']."\");</script>";
 
 		//insert registration form data into members table
 		$sql = "INSERT INTO members (account_type_id, group_name, fname, lname, email) ".
@@ -84,18 +66,25 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 		}
 		$member_id = (int)$dbLink->lastInsertId();
 		echo "<script>console.log('member-id: ".$member_id."');</script>";
+		if($member_id == 0){
+			$accountAlreadyExists = true;
+			throw new Exception("account could not be added because email is not unique");
+		}
+		$accountAlreadyExists = false;
 		
 		//insert instagram name into instagram table
-		$sql = "INSERT INTO instagram (member_id, instagram_name) ".
+		if($member['instagram'] != ''){
+			$sql = "INSERT INTO instagram (member_id, instagram_name) ".
 			"VALUES (:member_id, :instagram_name)";
-		try{
-			$statement = $dbLink->prepare($sql);
-			$statement->bindValue(':member_id', $member_id);
-			$statement->bindValue(':instagram_name', $member['instagram_name']);
-			$statement->execute();
-			echo "<script>console.log(\"".$sql."\");</script>";
-		}catch(PDOException $e){
-			echo "<script>console.log('".$e->getMessage()."')</script>";
+			try{
+				$statement = $dbLink->prepare($sql);
+				$statement->bindValue(':member_id', $member_id);
+				$statement->bindValue(':instagram_name', $member['instagram_name']);
+				$statement->execute();
+				echo "<script>console.log(\"".$sql."\");</script>";
+			}catch(PDOException $e){
+				echo "<script>console.log('".$e->getMessage()."')</script>";
+			}
 		}
 		
 		//inert phone into phone table
