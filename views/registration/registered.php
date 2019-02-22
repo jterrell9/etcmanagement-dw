@@ -1,6 +1,8 @@
 <!doctype html>
 
 <!--REGISTERED PAGE-->
+<!--Authored by Jack Terrell-->
+<!--Copyright StrongWares LLC and Etc. Management LLC 2019-->
 
 <html lang="en">
 
@@ -43,33 +45,35 @@
 		
 		if($isValid){
 			include '../../models/addMember.php';
-			addMember($artistName, $fname, $lname, $email, $instagram, $phone, $password);
+			if(addMember($artistName, $fname, $lname, $email, $instagram, $phone, $password)){
+				echo '<h2>Thank you for joining Etc. Management, '.$fname.'!</h2>';
+				echo '<p>Please check your email to confirm your account'."\r\n".
+						'<br />sure to check your spam folder if it does not appear in your inbox.</p>'."\r\n".
+						'<p style="color: red">Do not hit refresh or press back button</p>';
 
-			echo '<h2>Thank you for joining Etc. Management, '.$fname.'!</h2>';
-			echo '<p>Please check your email to confirm your account'."\r\n".
-					'<br />sure to check your spam folder if it does not appear in your inbox.</p>'."\r\n".
-					'<p style="color: red">Do not hit refresh or press back button</p>';
+				$subject1 = 'Welcome '.$fname.' to the Etc Family!';
+				$message1 = 'Hello '.$fname.' '.$lname.",\r\n\r\n".
+					"\t".'We are so glad you decided to take a big step in digital media marketing.  We have wonderful services available to you so that you can grow your brand as an artist.  Please take this opportunity to view these services on our website, and explore your user portal.'."\r\n\r\n\t".
+					'Sincerely,'."\r\n\t".'Etc Management team';
+				$headers1 = 'From: etcmanagement@jackterrell.org' . "\r\n" .
+							'Reply-To: etcmanagement@jackterrell.org' . "\r\n" .
+							'X-Mailer: PHP/' . phpversion();
+				mail($email, $subject1, $message1, $headers1);
 
-			$subject1 = 'Welcome '.$fname.' to the Etc Family!';
-			$message1 = 'Hello '.$fname.' '.$lname.",\r\n\r\n\t".
-				'We are so glad you decided to take a big step in digital media marketing.  We have wonderful services available to you so that you can grow your brand as an artist.  Please take this opportunity to view these services on our website, and explore your user portal.'."\r\n\r\n\t".
-				'Sincerely,'."\r\n\t".'Etc Management team';
-			$headers1 = 'From: etcmanagement@jackterrell.org' . "\r\n" .
-						'Reply-To: etcmanagement@jackterrell.org' . "\r\n" .
-						'X-Mailer: PHP/' . phpversion();
-			mail($email, $subject1, $message1, $headers1);
-
-			$subject2 = 'NEW USER ADDED TO DATABASE';
-			$message2 = 'New user information:'."\r\n".
-						'artst/company name: '.$artistName."\r\n".
-						'instagram: '.$instagram."\r\n".
-						'name: '.$fname.' '.$lname."\r\n".
-						'email: '.$email."\r\n".
-						'phone: '.$phone."\r\n";
-			$headers2 = 'From: etcmanagement@jackterrell.org' . "\r\n" .
-						'Reply-To: etcmanagement@jackterrell.org' . "\r\n" .
-						'X-Mailer: PHP/' . phpversion();
-			mail("etcmanagement@jackterrell.org", $subject2, $message2, $headers2);
+				$subject2 = 'NEW USER ADDED TO DATABASE';
+				$message2 = 'New user information:'."\r\n".
+							'artst/company name: '.$artistName."\r\n".
+							'instagram: '.$instagram."\r\n".
+							'name: '.$fname.' '.$lname."\r\n".
+							'email: '.$email."\r\n".
+							'phone: '.$phone."\r\n";
+				$headers2 = 'From: etcmanagement@jackterrell.org' . "\r\n" .
+							'Reply-To: etcmanagement@jackterrell.org' . "\r\n" .
+							'X-Mailer: PHP/' . phpversion();
+				mail("etcmanagement@jackterrell.org", $subject2, $message2, $headers2);
+			}else{
+				echo '<h2>Sorry, an account for '.$email.' already exists</h2>'."\r\n";
+			}
 		}else{
 			echo '<h2>Sorry, your passwords did not match, please click below to try again</h2>'."\r\n".
 				'<form method="post" action="register.php" onSubmit="php/retry-registration.php">'."\r\n".
