@@ -28,6 +28,7 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 	}catch(PDOException $e){
 		echo "<script>console.log('".$e->getMessage()."')</script>";
 		$isConnected = false;
+		return false;
 	}
 	
 	if($isConnected){
@@ -48,7 +49,6 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 			'hmac' => $passwordHash['hmac'],
 			'hash_password' => $passwordHash['ciphertext'],
 		];
-		echo "<script>console.log(\"instagram: ".$member['instagram']."\");</script>";
 
 		//insert registration form data into members table
 		$sql = "INSERT INTO members (account_type_id, group_name, fname, lname, email) ".
@@ -67,10 +67,8 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 		$member_id = (int)$dbLink->lastInsertId();
 		echo "<script>console.log('member-id: ".$member_id."');</script>";
 		if($member_id == 0){
-			$accountAlreadyExists = true;
-			throw new Exception("account could not be added because email is not unique");
+			return false;
 		}
-		$accountAlreadyExists = false;
 		
 		//insert instagram name into instagram table
 		if($member['instagram'] != ''){
@@ -117,5 +115,6 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 	}else{
 		echo "<script>console.log('ERROR: not connected to database')</script>";
 	}
+	return true;
 }
 ?>
