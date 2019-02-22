@@ -18,7 +18,7 @@ $(function(){
 	logoBox.delay(5500)
 		.slideDown(2000);
 	var copyright = $('#copyright');
-	copyright.delay(5500)
+	copyright.delay(6000)
 			.fadeIn(500);
 //	var flags = $('#flags');
 //	flags.delay(10000).fadeIn(1000);

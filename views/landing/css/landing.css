@@ -95,6 +95,10 @@ textarea {
  /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/*Authored by Jack Terrell*/
+/*Copyright StrongWares Consulting LLC and Etc. Management LLC 2019*/
+
 textarea:focus, input:focus{
     outline: none;
 }
@@ -122,7 +126,7 @@ a:visited{
 body{
 	margin: 0px;
 	background-image: url("../../../assets/img/bg.jpg");
-	background-repeat: no-repeat;
+/*	background-repeat: no-repeat;*/
 	background-color: black;
 	font-family: 'Quicksand', sans-serif;
 }
