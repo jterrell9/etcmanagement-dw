@@ -1,6 +1,8 @@
 <!doctype html>
 
 <!--REGISTRATION PAGE-->
+<!--Authored by Jack Terrell-->
+<!--Copyright StrongWares LLC and Etc. Management LLC 2019-->
 
 <html lang="en">
 
@@ -57,7 +59,7 @@
 		}
 		
 		?>
-		<form name="register" id="register-form" method="post" onSubmit="php/registration-form.php" action="registered.php">
+		<form name="register" id="register-form" method="post" onSubmit="../../controllers/php/registration-form.php" action="registered.php">
 			<table id="form-table">
 				<tr>
 					<td class="label-cell"><label for="artist-comp-name" style="margin: 0px 5px 0px 20px;">Artist/Company Name:</label></td>
@@ -65,7 +67,7 @@
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="instagram" style="margin: 0px 5px 0px 20px;">Instagram Name:</label></td>
-					<td><input type="text" name="instagram" id="instagram" size="40" maxlength="40" value="<?php echo $instagram; ?>" required /></td>
+					<td><input type="text" name="instagram" id="instagram" size="40" maxlength="40" value="<?php echo $instagram; ?>" /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="fname" style="margin: 0px 5px 0px 20px;">First Name:</label></td>
