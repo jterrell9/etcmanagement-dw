@@ -101,6 +101,9 @@ textarea {
  /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/*Authored by Jack Terrell*/
+/*Copyright StrongWares Consulting LLC and Etc. Management LLC 2019*/
+
 textarea:focus, input:focus{
     outline: none;
 }
@@ -128,7 +131,6 @@ a:visited{
 body{
 	margin: 0px;
 	background-image: url("../../../assets/img/bg-registration.jpg");
-	background-repeat: no-repeat;
 	background-color: black;
 	font-family: "Montserrat", sans-serif;
 }
@@ -171,17 +173,6 @@ body{
 	background-color: white;
 	opacity: .75;
 }
-/*
-#registration-container{
-	width: 600px;
-	position: relative;
-	margin-left: -300;
-	left: 50%;
-	background-color: white;
-	border-radius: 10px;
-	border: 1px solid black;
-}
-*/
 #form-table{
 	margin-left: auto;
 	margin-right: auto;
