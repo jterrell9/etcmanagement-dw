@@ -1,3 +1,7 @@
+<!--Registration form processing and validation script-->
+<!--Authored by Jack Terrell-->
+<!--Copyright StrongWares Consulting LLC and Etc. Management LLC 2019-->
+
 <?php
 $artistName = filter_input(INPUT_POST, 'artist-comp-name');
 $instagram = filter_input(INPUT_POST, 'instagram');
