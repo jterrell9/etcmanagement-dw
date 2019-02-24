@@ -51,7 +51,7 @@
 		<h1 style="margin: 0px;">Join Our Growing Team!</h1>
 		<p style="font-size: 10px; margin: 0px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 		<p>We are doing all we can to keep your account secure, but even the best security means nothing without a secure password.
-		<br />So please use at least </p>
+		<br />So please use at least 8 characters, at least one uppercase A-Z, lowercase a-z, and one special character.</p>
 		<?php
 		
 		if(!$isValid){

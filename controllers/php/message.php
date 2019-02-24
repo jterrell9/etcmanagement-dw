@@ -4,15 +4,15 @@
 
 <?php
 
-require_once 'Mail.php';
-require_once 'Mail/RFC822.php';
-
 //This method uses the PEAR Mail package to send an encrypted email message on a smtp server with authentication
 //@param $to: string or array of strings of recipient email addresses
 //@param $from: string representation of email address of sender
 //@param $body: string representation of email body
 //@param $is_body_html: boolean value that describes the formatting of the $body variable
 function send_email($to, $from, $subject, $body, $is_body_html = false) {
+	ini_set("include_path", '/home1/jterrell/php:' . ini_get("include_path") );
+	require_once 'Mail.php';
+	require_once 'Mail/RFC822.php';
 	if(!valid_email($to)) {
 		throw new Exception('This To address is invalid: '.htmlspecialchars($to));
 	}
@@ -24,12 +24,13 @@ function send_email($to, $from, $subject, $body, $is_body_html = false) {
 	$smtp['host'] = 'ssl://jackterrell.org';
 	$smtp['port'] = 465;
 	$smtp['auth'] = true;
-	$smtp['username'] = $from;
-	if($from == 'webmaster@jackterrell.org'){
-		smtp['password'] = file_get_contents('/home1/jterrell/etcmanagment-config/.conf/webmaster_email.key');
+	if($from == 'Etc Management Webmaster <webmaster@jackterrell.org>') {
+		$smtp['username'] = 'webmaster@jackterrell.org';
+		$smtp['password'] = file_get_contents('/home1/jterrell/etcmanagment-config/.conf/webmaster_email.key');
 	}
-	if($from == 'etcmanagement@jackterrell.org'){
-		smtp['password'] = file_get_contents('/home1/jterrell/etcmanagment-config/.conf/etcmanagement_email.key');
+	if($from == 'Etc. Management <etcmanagement@jackterrell.org>') {
+		$smtp['username'] = 'etcmanagement@jackterrell.org';
+		$smtp['password'] = file_get_contents('/home1/jterrell/etcmanagment-config/.conf/etcmanagement_email.key');
 	}
 	
 	//establish connection
