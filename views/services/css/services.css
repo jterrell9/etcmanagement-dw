@@ -1,7 +1,10 @@
 /*Authored by Jack Terrell*/
 /*Copyright StrongWares LLC and Etc. Management LLC 2019*/
 
-
+body{
+	background-image: url('../assets/img/services-bg1.jpg');
+	backgrond-color: white;
+}
 #intro{
 	display: none;
 	margin-top: 250px;
