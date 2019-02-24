@@ -19,6 +19,7 @@
 
 	<!--CSS stylesheets-->
 	<link rel="stylesheet" href="../../controllers/css/normalize.css">
+	<link rel="stylesheet" href="../../controllers/css/global.css">
 	<link rel="stylesheet" href="css/artists.css">
 	
 	<!--FONTS-->
