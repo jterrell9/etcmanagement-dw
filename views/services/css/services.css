@@ -1,0 +1,52 @@
+/*Authored by Jack Terrell*/
+/*Copyright StrongWares LLC and Etc. Management LLC 2019*/
+
+
+#intro{
+	display: none;
+	margin-top: 250px;
+	text-align: center;
+	color: black;
+	font-size: 200px; 
+	text-shadow: 0px 0px 100px #FF6F61;
+}
+#header{
+	display: none;
+	text-align: center;
+	color: black;
+	margin-top: 100px;
+}
+#header h1{
+	font-family: "Bosthon Brush";
+	font-size: 100px;
+	font-weight: lighter;
+	text-shadow: 0px 0px 10px #FFDA29;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#header h2{
+	font-size: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#services{
+	display: none;
+	text-align: center;
+	color: black;
+	margin: 50px 0px;
+	background: white;
+	opacity: .75;
+}
+#services-container{
+	display: inline-block;
+	opacity: 1;
+}
+#services-table td{
+	width: 250px;
+	overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+}
+#services img{
+	cursor: pointer;
+}
