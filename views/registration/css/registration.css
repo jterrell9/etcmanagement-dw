@@ -1,3 +1,7 @@
+body{
+	background-image: url('../assets/img/bg-registration.jpg');
+	backgrond-color: white;
+}
 #logo-container{
 	width: 100%;
 }

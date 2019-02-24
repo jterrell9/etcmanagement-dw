@@ -130,7 +130,7 @@ a:visited{
 }
 body{
 	margin: 0px;
-	background-image: url("../../../assets/img/bg-registration.jpg");
+	background-image: url("../../../views/registration/assets/img/bg-registration.jpg");
 	background-color: black;
 	font-family: "Montserrat", sans-serif;
 }
