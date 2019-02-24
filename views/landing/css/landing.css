@@ -1,6 +1,20 @@
 /*Authored by Jack Terrell*/
 /*Copyright StrongWares Consulting LLC and Etc. Management LLC 2019*/
 
+@font-face {
+	font-family: "Honey Script";
+	src: url('../../../assets/fonts/HoneyScript-Light.ttf') format('truetype');
+}
+.honey-script{
+	font-family: "Honey Script", cursive;
+}
+@font-face{
+	font-family: "Bosthon Brush";
+	src: url("../../../assets/fonts/BOSTHONBRUSH.otf") format("opentype");
+}
+.bosthon-brush{
+	font-family: "Bosthon Brush";
+}
 body{
 	background-image: url("../../../assets/img/bg.jpg");
 	background-color: black;
@@ -8,7 +22,7 @@ body{
 }
 #logo{
 	display: none;
-	margin-top: 250px;
+	margin-top: 100px;
 	text-align: center;
 	color: white;
 	font-size: 200px; 
@@ -21,7 +35,7 @@ body{
 	margin-top: 100px;
 }
 #register-form{
-	margin-top: 100px;
+/*	margin-top: 100px;*/
 }
 #register-form input{
 	border: 1px solid white;
@@ -51,7 +65,6 @@ body{
 	display: none;
 	text-align: center;
 	color: white;
-	margin-top: 100px;
 }
 #big-text h1{
 	font-family: "Bosthon Brush";

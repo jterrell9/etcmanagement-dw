@@ -108,20 +108,6 @@ a {
 a:visited{
 	color: inherit;
 }
-@font-face {
-	font-family: "Honey Script";
-	src: url('../../../assets/fonts/HoneyScript-Light.ttf') format('truetype');
-}
-.honey-script{
-	font-family: "Honey Script", cursive;
-}
-@font-face{
-	font-family: "Bosthon Brush";
-	src: url("../../../assets/fonts/BOSTHONBRUSH.otf") format("opentype");
-}
-.bosthon-brush{
-	font-family: "Bosthon Brush";
-}
 body{
 	margin: 0px;
 	background-repeat: no-repeat;
@@ -160,8 +146,11 @@ nav #homebutton{
 	margin-left: 10px;
 }
 #copyright{
+	display: none;
+	background-color: black;
+	opacity: .75;
 	color: white;
-	margin: 20px;
+	padding: 5px 20px;
 }
 
  /* ==========================================================================
