@@ -15,6 +15,7 @@
 	<link rel="icon" type="image/png" href="../../assets/img/etc-favicon.png">
 
 	<link rel="stylesheet" href="../../controllers/css/normalize.css">
+	<link rel="stylesheet" href="../../controllers/css/global.css">
 	<link rel="stylesheet" href="css/registration.css">
 	
 	<!--FONTS-->
