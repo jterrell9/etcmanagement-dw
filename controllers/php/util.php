@@ -1,7 +1,7 @@
-<!--Authored By Jack Terrell-->
-<!--Copyright StrongWares LLC and Etc. Management LLC 2019-->
-
 <?php
+//Authored By Jack Terrell
+//Copyright StrongWares LLC and Etc. Management LLC 2019
+//utitlity functions
 
 function scan_photo_dir($path) {
 	$files = scandir($path);
