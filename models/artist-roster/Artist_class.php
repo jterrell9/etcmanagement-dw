@@ -1,9 +1,7 @@
-<!--Authored by Jack Terrell-->
-<!--Copyright StrongWares LLC and Etc. Management LLC 2019-->
-
-This class 
-
 <?php
+//Authored by Jack Terrell
+//Copyright StrongWares LLC and Etc. Management LLC 2019
+//This class is the abstraction to create Artists for the artist roster of the website
 
 class Artist {
 	public $name;
@@ -25,6 +23,51 @@ class Artist {
 		$this->image_files = $image_files;
 		$this->press_links = $press_links;
 	}
+	
+	public function printStr_name() {
+		if(!isset($this->name)) {
+			return NULL;
+		}
+		return $this->name;
+	}
+	
+	public function printStr_artist_type() {
+		if(!isset($this->artist_type) or count($this->artist_type) < 1) {
+			return NULL;
+		}
+		$str = '';
+		foreach($this->artist_type as $type) {
+			$str .= ' | '.$type;
+		}
+		return $str.' |';
+	}
+	
+	public function printStr_genres() {
+		if(!isset($this->genres) or count($this->genres) < 1) {
+			return NULL;
+		}
+		$str = '';
+		foreach($this->genres as $genre) {
+			$str .= '| '.$genre.' ';
+		}
+		return $str . '|';
+	}
+	
+	public function printStr_social_media() {
+		if(!isset($this->social_media) or count($this->social_media) < 1) {
+			return NULL;
+		}
+		$str = '';
+		foreach($this->social_media as $website => $url) {
+			$str .= "{$website}: {$url}"."\r\n";
+		}
+		return $str;
+	}
+	
+	public function printHTML_social_media() {
+		
+	}
+	
 }
 
 class Booking {
@@ -43,14 +86,17 @@ class Booking {
 	}
 	
 	public function print_booking() {
-		$booking_str = $this->event_name.'|'.$this->venue;
-		if($this->event_date != NULL) {
-			$booking_str .= '|'.$this->event_date;
+		$booking_str = '';
+		if(isset($this->event_name) and isset($this->venue)){
+			$booking_str .= $this->event_name.' | '.$this->venue;
 		}
-		if($this->extra_info != NULL) {
-			$booking_str .= '|'.$this->extra_info;
+		if(isset($this->event_date)) {
+			$booking_str .= ' | '.$this->event_date;
 		}
-		return $booking_str;
+		if(isset($this->extra_info)) {
+			$booking_str .= ' | '.$this->extra_info;
+		}
+		return $booking_str.' |';
 	}
 }
 
