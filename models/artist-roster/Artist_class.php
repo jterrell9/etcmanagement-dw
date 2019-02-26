@@ -58,14 +58,21 @@ class Artist {
 			return NULL;
 		}
 		$str = '';
-		foreach($this->social_media as $website => $url) {
+		foreach($this->social_media as $website=>$url) {
 			$str .= "{$website}: {$url}"."\r\n";
 		}
 		return $str;
 	}
 	
 	public function printHTML_social_media() {
-		
+		if(!isset($this->social_media) or count($this->social_media) < 1) {
+			return NULL;
+		}
+		$html = '<ul>';
+		foreach($this->social_media as $website=>$url) {
+			$html .= "<li><a href=\"{$url}\" target=\"_blank\">{$website}</a></li>\r\n";
+		}
+		return $html;
 	}
 	
 }
