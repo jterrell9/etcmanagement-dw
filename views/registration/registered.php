@@ -80,7 +80,6 @@
 					'User\'s Name: '.$fname.' '.$lname."\r\n".
 					'Email: '.$email."\r\n".
 					'Phone: '.$phone."\r\n".
-					'Instagram: '.$instagram;
 				$headers = 'From: '.$from."\r\n".
     				'Reply-To: '.$from."\r\n".
     				'X-Mailer: PHP/' . phpversion();
@@ -100,7 +99,6 @@
 			echo '<h2>Sorry, your passwords did not match, please click below to try again</h2>'."\r\n".
 				'<form method="post" action="register.php" onSubmit="php/retry-registration.php">'."\r\n".
 				'<input type="hidden" name="artist-comp-name" value="'.$artistName.'">'."\r\n".
-				'<input type="hidden" name="instagram" value="'.$instagram.'">'."\r\n".
 				'<input type="hidden" name="fname" value="'.$fname.'">'."\r\n".
 				'<input type="hidden" name="lname" value="'.$lname.'">'."\r\n".
 				'<input type="hidden" name="email" value="'.$email.'">'."\r\n".

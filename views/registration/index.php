@@ -67,10 +67,6 @@
 					<td><input type="text" name="artist-comp-name" id="artist-comp-name" size="40"  maxlength="40" value="<?php echo $artistName; ?>" required /></td>
 				</tr>
 				<tr>
-					<td class="label-cell"><label for="instagram" style="margin: 0px 5px 0px 20px;">Instagram Name:</label></td>
-					<td><input type="text" name="instagram" id="instagram" size="40" maxlength="40" value="<?php echo $instagram; ?>" /></td>
-				</tr>
-				<tr>
 					<td class="label-cell"><label for="fname" style="margin: 0px 5px 0px 20px;">First Name:</label></td>
 					<td><input type="text" name="fname" id="fname" size="40" maxlength="40" value="<?php echo $fname; ?>" required /></td>
 				</tr>

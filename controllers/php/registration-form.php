@@ -4,7 +4,6 @@
 
 //Registration form processing and validation script
 $artistName = filter_input(INPUT_POST, 'artist-comp-name');
-$instagram = filter_input(INPUT_POST, 'instagram');
 $fname = filter_input(INPUT_POST, 'fname');
 $lname = filter_input(INPUT_POST, 'lname');
 $email = filter_input(INPUT_POST, 'email');
