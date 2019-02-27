@@ -16,7 +16,7 @@ include '../../controllers/php/openSSL.php';
 //@param: $phone is user's phone from registration form
 //@param: $password is user's password from registration form
 //returns boolean value to validate completion
-function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password){
+function addMember($group_name,$fname,$lname,$email,$phone,$password){
 	//connect to MySQL database
 	$isConnected = false;
 	$dsn = 'mysql:host=localhost;dbname=jterrell_etc-users';
