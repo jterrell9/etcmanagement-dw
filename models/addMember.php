@@ -15,6 +15,7 @@ include '../../controllers/php/openSSL.php';
 //@param: $instagram is user's instagram name from registration form
 //@param: $phone is user's phone from registration form
 //@param: $password is user's password from registration form
+//returns boolean value to validate completion
 function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password){
 	//connect to MySQL database
 	$isConnected = false;
