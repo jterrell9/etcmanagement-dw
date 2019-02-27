@@ -1,26 +1,31 @@
 <?php
 //Authored By Jack Terrell
 //Copyright StrongWares LLC and Etc. Management LLC 2019
+
 //utitlity functions
 
+//function that scans directory for image files
+//@param $path: path to img directory
+//returns: array of filenames of photo files in path
 function scan_photo_dir($path) {
 	$files = scandir($path);
-	$photoCount = count($directories);
-	$photoIndex = 2;
-	$photos = array();
-	while ($photoIndex < $photoCount) {
-		if(substr($files[$photoIndex], -4) === '.jpg' || 
-		   substr($files[$photoIndex], -5) === '.jpeg' || 
-		   substr($files[$photoIndex], -4) === '.bmp' || 
-		   substr($files[$photoIndex], -4) === '.gif' || 
-		   substr($files[$photoIndex], -4) === '.ico' || 
-		   substr($files[$photoIndex], -4) === '.png' || 
-		   substr($files[$photoIndex], -4) === '.svg' || 
-		   substr($files[$photoIndex], -5) === '.tiff' || 
-		   substr($files[$photoIndex], -4) === '.tif') {
-			$photos[] = $files[$photoIndex];
+	if($files){
+		$photoCount = count($files);
+		$photos = array();
+		for($i=2; $i < $photoCount; $i++) {
+			if(substr(strtolower($files[$i]), -4) === '.jpg' or 
+			   substr(strtolower($files[$i]), -5) === '.jpeg' or 
+			   substr(strtolower($files[$i]), -4) === '.bmp' or 
+			   substr(strtolower($files[$i]), -4) === '.gif' or 
+			   substr(strtolower($files[$i]), -4) === '.ico' or 
+			   substr(strtolower($files[$i]), -4) === '.png' or 
+			   substr(strtolower($files[$i]), -4) === '.svg' or 
+			   substr(strtolower($files[$i]), -5) === '.tiff' or 
+			   substr(strtolower($files[$i]), -4) === '.tif' or
+			   substr(strtolower($files[$i]), -4) === '.pdf') {
+				$photos[] = $files[$i];
+			}
 		}
-		$photoIndex++;
 	}
 	return $photos;
 }
