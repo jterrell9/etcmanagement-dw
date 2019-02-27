@@ -1,9 +1,9 @@
-<!--
-	This model defines a function for adding users 
-	into the member table and user database
--->
-
 <?php
+//Authored By Jack Terrell
+//Copyright StrongWare LLC and Etc. Management LLC 2019
+
+//This model defines a function for adding users into the member table and user database
+
 //include openSSL encryption and descryption support
 include '../../controllers/php/openSSL.php';
 
@@ -68,21 +68,6 @@ function addMember($group_name,$fname,$lname,$email,$instagram,$phone,$password)
 		echo "<script>console.log('member-id: ".$member_id."');</script>";
 		if($member_id == 0){
 			return false;
-		}
-		
-		//insert instagram name into instagram table
-		if($member['instagram'] != ''){
-			$sql = "INSERT INTO instagram (member_id, instagram_name) ".
-			"VALUES (:member_id, :instagram_name)";
-			try{
-				$statement = $dbLink->prepare($sql);
-				$statement->bindValue(':member_id', $member_id);
-				$statement->bindValue(':instagram_name', $member['instagram_name']);
-				$statement->execute();
-				echo "<script>console.log(\"".$sql."\");</script>";
-			}catch(PDOException $e){
-				echo "<script>console.log('".$e->getMessage()."')</script>";
-			}
 		}
 		
 		//inert phone into phone table
