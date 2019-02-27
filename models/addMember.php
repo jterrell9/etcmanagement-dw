@@ -44,7 +44,6 @@ function addMember($group_name,$fname,$lname,$email,$phone,$password){
 			'fname' => $fname,
 			'lname' => $lname,
 			'email' => $email,
-			'instagram_name' => $instagram,
 			'phone' => $phone,
 			'iv' => $passwordHash['iv'],
 			'hmac' => $passwordHash['hmac'],
