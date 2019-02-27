@@ -10,22 +10,22 @@ class Artist {
 	public $social_media;
 	public $bookings;
 	public $bio;
- 	public $image_files;
 	public $press_links;
+ 	public $image_files;
 	
-	public function __construct($name,$artist_type,$genres,$social_media,$bookings,$bio,$image_files,$press_links) {
+	public function __construct($name, $artist_type, $genres, $social_media, $bookings, $bio, $press_links, $image_files) {
 		$this->name = $name;
 		$this->artist_type = $artist_type;
 		$this->genres = $genres;
 		$this->social_media = $social_media;
 		$this->bookings = $bookings;
 		$this->bio = $bio;
-		$this->image_files = $image_files;
 		$this->press_links = $press_links;
+		$this->image_files = $image_files;
 	}
 	
 	//function returns name string
-	public function printStr_name() {
+	public function getStr_name() {
 		if(!isset($this->name)) {
 			return NULL;
 		}
@@ -33,7 +33,7 @@ class Artist {
 	}
 	
 	//function returns artist_type array as a formatted fence-posted string
-	public function printStr_artist_type() {
+	public function getStr_artist_type() {
 		if(!isset($this->artist_type) or count($this->artist_type) < 1) {
 			return NULL;
 		}
@@ -45,7 +45,7 @@ class Artist {
 	}
 	
 	//function returns genres array as a formatted fence-posted string
-	public function printStr_genres() {
+	public function getStr_genres() {
 		if(!isset($this->genres) or count($this->genres) < 1) {
 			return NULL;
 		}
@@ -57,7 +57,7 @@ class Artist {
 	}
 	
 	//function returns social_media array as a formatted string
-	public function printStr_social_media() {
+	public function getStr_social_media() {
 		if(!isset($this->social_media) or count($this->social_media) < 1) {
 			return NULL;
 		}
@@ -69,40 +69,71 @@ class Artist {
 	}
 	
 	//function returns social_media array formatted as HTML list of links
-	public function printHTML_social_media() {
+	public function getHTML_social_media() {
 		if(!isset($this->social_media) or count($this->social_media) < 1) {
 			return NULL;
 		}
-		$html = "\r\n\t\t\t".'<ul>'."\r\n";
+		$html = "\r\n".'<ul>'."\r\n";
 		foreach($this->social_media as $website=>$url) {
-			$html .= "\t\t\t\t<li><a href=\"{$url}\" target=\"_blank\">{$website}</a></li>\r\n";
+			$html .= "\t<li><a href=\"{$url}\" target=\"_blank\">{$website}</a></li>\r\n";
 		}
-		return $html."\t\t\t".'</ul>'."\r\n";
+		return $html.'</ul>'."\r\n";
 	}
 	
 	//function returns bookings array formatted as HTML list, seperated by past and future events
-	public function printHTML_bookings() {
+	public function getHTML_bookings() {
 		if(!isset($this->bookings) or count($this->bookings) < 1) {
 			return NULL;
 		}
-		$html = "<p>Recent Bookings</p>"."\r\n".
-			"<ul>";
+		$html = "<h3>Recent Bookings:</h3>\r\n".
+			"<ul>\r\n";
 		foreach($this->bookings as $booking) {
 			if($booking->isPast()) {
 				$html .= "\t<li>".$booking->print_booking()."</li>"."\r\n";
 			}
 		}
 		$html .= "</ul>"."\r\n".
-			"<p>Future Bookings</p>"."\r\n".
-			"<ul>";
+			"<h3>Future Bookings:</h3>"."\r\n".
+			"<ul>\r\n";
 		foreach($this->bookings as $booking) {
 			if(!($booking->isPast())) {
 				$html .= "\t<li>".$booking->print_booking()."</li>"."\r\n";
 			}
 		}
-		return $html;
+		return $html."</ul>\r\n";
 	}
 	
+	//function returns bio string
+	public function getStr_bio() {
+		if(!isset($this->bio)) {
+			return NULL;
+		}
+		return $this->bio;
+	}
+	
+	//function returns a html list of press_links
+	public function getHTML_press_links() {
+		if(!isset($this->press_links) or count($this->press_links) < 1) {
+			return NULL;
+		}
+		$html = '<ul>'."\r\n";
+		foreach($this->press_links as $title=>$press_link) {
+			$html .= "\t<li><a href=\"{$press_link}\" target=\"_blank\">{$title}</a></li>\r\n";
+		}
+		return $html."</ul>\r\n";
+	}
+	
+	//function to display artist images
+	public function getHTML_image_files($rel_path) {
+		if(!isset($this->image_files) or count($this->image_files) < 1) {
+			return NULL;
+		}
+		$html = '<div style="display: inline-block; width: 100%;">'."\r\n";
+		foreach($this->image_files as $imgFile) {
+			$html .= "\t"."<img src=\"".$rel_path.$imgFile."\" alt=\"".$imgFile."\" style=\"width: 100%;\" />"."\r\n";
+		}
+		return $html.'</div>'."\r\n";
+	}
 }
 
 //class for creating bookings associated with artists
@@ -150,8 +181,8 @@ class Booking {
 	}
 }
 
-//Class to describe image files
-Class Image {
+//class to describe image files
+class Image {
 	public $alt;
 	public $src;
 	
