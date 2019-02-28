@@ -15,11 +15,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!--Favicon-->
-	<link rel="icon" type="image/png" href="../../../../assets/img/etc-favicon.png">
+	<link rel="icon" type="image/png" href="../../../assets/img/etc-favicon.png">
 
 	<!--CSS stylesheets-->
-	<link rel="stylesheet" href="../../../../controllers/css/normalize.css">
-	<link rel="stylesheet" href="../../../../controllers/css/global.css">
+	<link rel="stylesheet" href="../../../controllers/css/normalize.css">
+	<link rel="stylesheet" href="../../../controllers/css/global.css">
 	<link rel="stylesheet" href="css/frankie-sinn.css">
 	
 	<!--FONTS-->
@@ -39,7 +39,7 @@
 
 <body>
 	<?php
-		require_once 'frankie-sinn.php';
+		require_once 'frankie_sinn/frankie-sinn.php';
 	?>
 	
 <!--ARTIST INFO-->
