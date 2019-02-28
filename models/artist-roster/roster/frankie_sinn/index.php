@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!--Favicon-->
-	<link rel="icon" type="image/png" href="../../assets/img/etc-favicon.png">
+	<link rel="icon" type="image/png" href="../../../../assets/img/etc-favicon.png">
 
 	<!--CSS stylesheets-->
 	<link rel="stylesheet" href="../../../../controllers/css/normalize.css">
@@ -44,19 +44,20 @@
 	
 <!--ARTIST INFO-->
 	<section id="artist-info">
-		<h1><?php echo $frankie_sinn->printStr_name(); ?></h1>
-		<h2><?php echo $frankie_sinn->printStr_artist_type(); ?></h2>
-		<h3>Genres: <?php echo $frankie_sinn->printStr_genres(); ?></h3>
-		<h4>Social Media Links:</h4>
+		<h1><?php echo $frankie_sinn->getStr_name(); ?></h1>
+		<h2><?php echo $frankie_sinn->getStr_artist_type(); ?></h2>
+		<h3>Genres: <?php echo $frankie_sinn->getStr_genres(); ?></h3>
+		<h3>Social Media Links:</h3>
 		<?php 
-			echo $frankie_sinn->printHTML_social_media();
-			echo $frankie_sinn->printHTML_bookings(); 
+			echo $frankie_sinn->getHTML_social_media();
+			echo $frankie_sinn->getHTML_bookings(); 
 		?>
+		<h3>Bio: <?php echo $frankie_sinn->getStr_bio(); ?></h3>
+		<h3>Press Links:</h3>
+		<?php echo $frankie_sinn->getHTML_press_links(); ?>
+		<h3>Image assets:</h3>
+		<?php echo $frankie_sinn->getHTML_image_files('img/'); ?>
 	</section>
-	
-	
-<!--SCRIPTS-->
-	<script src="../../../../controllers/lib/jquery-3.3.1.min.js"></script>
 	
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 	<script>

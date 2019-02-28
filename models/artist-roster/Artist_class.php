@@ -130,7 +130,12 @@ class Artist {
 		}
 		$html = '<div style="display: inline-block; width: 100%;">'."\r\n";
 		foreach($this->image_files as $imgFile) {
-			$html .= "\t"."<img src=\"".$rel_path.$imgFile."\" alt=\"".$imgFile."\" style=\"width: 100%;\" />"."\r\n";
+			if(substr(strtolower($imgFile), -4) === '.pdf'){
+				$html .= "\t<p>click to download: <a href=\"{$rel_path}{$imgFile}\" target=\"_blank\">{$imgFile}</a></p><br />\r\n";
+				continue;
+			}
+			$html .= "\t<p>{$imgFile}</p>\r\n".
+				"\t<img src=\"{$rel_path}{$imgFile}\" alt=\"{$imgFile}\" style=\"width: 100%;\" />\r\n";
 		}
 		return $html.'</div>'."\r\n";
 	}
