@@ -39,5 +39,5 @@ $press_links = array (
 );	
 $image_files = scan_photo_dir('../assets/frankie_sinn-img/');
 $frankie_sinn = new Artist($name, $artist_type, $genres, $social_media, $bookings, $bio, $press_links, $image_files);
-persist_artist($frankie_sinn, 'frankie_sinn.roster');
+update_roster($frankie_sinn);
 ?>

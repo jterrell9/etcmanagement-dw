@@ -42,13 +42,17 @@
 	require_once 'php/roster_util.php';
 	
 	$roster = getRoster_filenames();
-	echo var_dump($roster);
 	
 	$roster_file = 'assets/frankie_sinn.roster';
 	$artist = deserialize_artist($roster_file);
 	
 	$images_dir = 'assets/frankie_sinn-img/';
 	?>
+	
+<!--SELECTION FORM-->
+	<form name="roster-selector" method="get" action="index.php">
+		
+	</form>
 	
 <!--ARTIST INFO-->
 	<section id="artist-info">
