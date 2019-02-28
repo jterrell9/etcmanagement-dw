@@ -36,7 +36,7 @@ function getRoster_filenames() {
 	$files = scandir('../');
 	if($files) {
 		$roster = array();
-		for($i=2; $i < count($files; i++)) {
+		for($i=2; $i < count($files); $i++) {
 			if(substr(strtolower($files[$i]), -7) === '.roster') {
 				$roster[] = $files[$i];
 			}
