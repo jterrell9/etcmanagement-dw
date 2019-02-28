@@ -2,7 +2,7 @@
 //Authored by Jack Terrell
 //Copyright StrongWares LLC and Etc. Management LLC 2019
 
-include 'Artist_class.php';
+require_once 'Artist_class.php';
 
 //function create persistent file representing artists in the roster
 //@pparam $artist: Artist class instance
@@ -12,7 +12,7 @@ function persist_artist($artist, $file_name) {
 		throw Exception("Could not serialize artist, incorrect class type.");
 	}
 	$serilized_data = serialize($artist);
-	$roster_file = fopen($file_name) or die("Unable to open file.");
+	$roster_file = fopen($file_name, "w");
 	fwrite($roster_file, $serilized_data);
 	fclose($roster_file);
 }
