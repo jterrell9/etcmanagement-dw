@@ -6,6 +6,17 @@
 
 require_once 'Artist_class.php';
 
+//function that updates the roster file
+//@param $artist: Artist object representing artist
+function update_roster($artist) {
+	if(!($artist instanceof Artist)) {
+		throw new BadMethodCallException('Argument passed is wrong type, must be instance of Artist class.');
+	}
+	$artistname = $artist->getStr_name();
+	$filename = strtolower(str_replace(' ', '-', $artistname)).'.roster';
+	persist_artist($artist, $filename);
+}
+
 //function that scans directory for image files
 //@param $path: path to img directory
 //returns: array of filenames of photo files in path
