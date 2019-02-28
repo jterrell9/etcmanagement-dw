@@ -6,14 +6,14 @@ a{
 }
 @font-face {
 	font-family: "Honey Script";
-	src: url('../../assets/fonts/HoneyScript-Light.ttf') format('truetype');
+	src: url('../assets/fonts/HoneyScript-Light.ttf') format('truetype');
 }
 .honey-script{
 	font-family: "Honey Script", cursive;
 }
 @font-face{
 	font-family: "Bosthon Brush";
-	src: url("../../assets/fonts/BOSTHONBRUSH.otf") format("opentype");
+	src: url("../assets/fonts/BOSTHONBRUSH.otf") format("opentype");
 }
 .bosthon-brush{
 	font-family: "Bosthon Brush";

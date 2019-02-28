@@ -4,9 +4,8 @@
 
 //this file creates an Artist object for Frankie Sinn, emulating what the admin form will do
 
-require_once '../../../../controllers/php/util.php';
-require_once '../../Artist_class.php';
-include '../../serialize.php';
+require_once 'Artist_class.php';
+require_once 'roster_util.php';
 
 $name = 'Frankie Sinn';
 $artist_type = array('MC', 'Rapper');
@@ -31,14 +30,14 @@ $bookings = array(
 	new Booking('404 Day', $date = mktime(0, 0, 0, 4, 4, 2019), date('F j, Y', $date), 'Venue TBA')
 );
 $bio = 'INSERT FRANKIE SINN BIO HERE';
-$press_links = array(
+$press_links = array (
 	'Creative Loafing, 6/16/2016 - Ricky Raw\'s bass music top 5' => "https://creativeloafing.com/content-168415-Ricky-Raw's-bass-music-top-5",
 	'VoyageATL, 2/14/2018 - Meet Roosevelt Council of Vandal Rose' => "http://voyageatl.com/interview/meet-roosevelt-council-vandal-rose-west-atlanta/",
 	'VoyageATL, 4/4/2018 - Meet Frankie Sinn in West Atlanta' => "http://voyageatl.com/interview/meet-frankie-sinn-frankie-sinn-west-atlanta/",
 	'The Masquerade - Frankie Sinn' => "http://www.masqueradeatlanta.com/attraction/frankie-sinn/",
 	'Creative Loafing - Esham, Frankie Sinn at The Masquerade' => "https://local.creativeloafing.com/event-303524-Esham,-Frankie-Sinn"
 );	
-$image_files = scan_photo_dir('./frankie_sinn-img/');
+$image_files = scan_photo_dir('../assets/frankie_sinn-img/');
 $frankie_sinn = new Artist($name, $artist_type, $genres, $social_media, $bookings, $bio, $press_links, $image_files);
 persist_artist($frankie_sinn, 'frankie_sinn.roster');
 ?>

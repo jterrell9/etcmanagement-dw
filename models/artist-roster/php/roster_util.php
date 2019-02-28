@@ -33,7 +33,7 @@ function scan_photo_dir($path) {
 
 //function that returns array of .roster files present
 function getRoster_filenames() {
-	$files = scandir('../');
+	$files = scandir('assets/');
 	if($files) {
 		$roster = array();
 		for($i=2; $i < count($files); $i++) {
@@ -42,6 +42,7 @@ function getRoster_filenames() {
 			}
 		}
 	}
+	return $roster;
 }
 
 //function create persistent file representing artists in the roster
@@ -52,7 +53,7 @@ function persist_artist($artist, $file_name) {
 		throw Exception("Could not serialize artist, incorrect class type.");
 	}
 	$serilized_data = serialize($artist);
-	$roster_file = fopen($file_name, "w");
+	$roster_file = fopen($file_name, "w") or die('unable to open file');
 	fwrite($roster_file, $serilized_data);
 	fclose($roster_file);
 }
