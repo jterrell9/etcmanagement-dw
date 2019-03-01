@@ -12,9 +12,20 @@ function update_roster($artist) {
 	if(!($artist instanceof Artist)) {
 		throw new BadMethodCallException('Argument passed is wrong type, must be instance of Artist class.');
 	}
-	$artistname = $artist->getStr_name();
-	$filename = strtolower(str_replace(' ', '-', $artistname)).'.roster';
+	$filename = get_roster_filename($artist->getStr_name());
 	persist_artist($artist, $filename);
+}
+
+//this function returns the filename of the roster file
+//@param $artist_name: artist name string
+function get_roster_filename($artist_name) {
+	return strtolower(str_replace(' ', '_', $artist_name)).'.roster';
+}
+
+//function returns name of image directory
+//@param $artist_name: name of artist string
+function get_image_dir_name($artist_name) {
+	return strtolower(str_replace(' ', '_', $artist_name)).'-img';
 }
 
 //function that scans directory for image files
