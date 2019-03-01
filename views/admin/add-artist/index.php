@@ -38,12 +38,14 @@
 </head>
 
 <body>
+	
+<!--ARTIST INFO FORM-->
 	<section id="artist-info-form">
-		<form name="add-artist-form" id="add-artist-form" method="post" onSubmit="../../controllers/php/registration-form.php" action="registered.php">
+		<form name="add-artist-form" id="add-artist-form" method="post" action="registered.php">
 			<table id="form-table">
 				<tr>
 					<td class="label-cell"><label for="artist-name" style="margin: 0px 5px 0px 20px;">Artist Name:</label></td>
-					<td><input type="text" name="artist-name" size="40" required /></td>
+					<td><input type="text" name="artist-name" size="40" <?php if(isset) {echo "value=\"{$_POST['artist-name']}\"";}?> required /></td>
 				</tr>
 				<tr>
 					<td class="label-cell"><label for="instagram" style="margin: 0px 5px 0px 20px;">Instagram Name:</label></td>

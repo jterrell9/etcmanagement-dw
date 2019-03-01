@@ -25,3 +25,21 @@ body{
 p, h1, h2, h3, h4, h5, ul, li {
 	margin: 0px;
 }
+input {
+	border: 1px solid black;
+	padding: 2px;
+	border-radius: 5px;
+}
+button.update {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 100%;
+}
+button.update:hover {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 100%;
+	box-shadow: 2px 2px 5px black;
+}
