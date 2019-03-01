@@ -16,7 +16,7 @@
 	font-family: "Bosthon Brush";
 }
 body{
-	background-image: url("../../../assets/img/bg.jpg");
+	background-image: url("../../../assets/img/bg2.jpg");
 	background-color: black;
 	font-family: 'Quicksand', sans-serif;
 }
@@ -35,7 +35,7 @@ body{
 	margin-top: 100px;
 }
 #register-form{
-/*	margin-top: 100px;*/
+	margin-bottom: 400px;
 }
 #register-form input{
 	border: 1px solid white;

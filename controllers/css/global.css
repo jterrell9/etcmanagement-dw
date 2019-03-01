@@ -112,6 +112,7 @@ body{
 	margin: 0px;
 	background-repeat: no-repeat;
     background-size: 100%;
+	background-attachment: fixed;
 	font-family: "Montserrat", sans-serif;
 }
 nav {
