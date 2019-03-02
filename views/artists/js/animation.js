@@ -4,14 +4,16 @@
 //JQuery for site animation upon document load
 
 $(function(){
+	var introText = $('#intro');
+	introText.fadeIn(2000)
+		.delay(1000)
+		.fadeOut(1000);
 	var nav = $('.navigation');
-	nav.delay(1000)
+	nav.delay(4000)
 		.slideDown(500);
 	
 	
 	var copyright = $('#copyright');
-	copyright.delay(1000)
+	copyright.delay(4500)
 			.fadeIn(500);
-//	var flags = $('#flags');
-//	flags.delay(10000).fadeIn(1000);
   });

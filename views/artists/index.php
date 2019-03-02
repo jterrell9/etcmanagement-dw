@@ -40,6 +40,11 @@
 	
 	<div style="height: 5000px;"></div>
 	
+<!--INTRO TEXT-->  
+	<section id="intro">
+		<div id="intro-text" class="honey-script">Artists</div>
+	</section>
+	
 <!--NAVIGATION-->
 	<nav class="navigation">
 		<table width="100%">
