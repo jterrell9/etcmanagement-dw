@@ -120,6 +120,7 @@ nav {
 	position: fixed;
 	top: 0px;
 	width: 100%;
+	height: 60px;
 	background: #ffd4d1;
 	background: -moz-linear-gradient(-45deg, #ffd4d1 0%, #ff6f61 100%);
 	background: -webkit-linear-gradient(-45deg, #ffd4d1 0%,#ff6f61 100%);
@@ -146,12 +147,16 @@ nav #homebutton{
 	text-align: left; 
 	margin-left: 10px;
 }
-#copyright{
-	display: none;
-	background-color: black;
-	opacity: .75;
+footer {
+	opacity: .5;
 	color: white;
-	padding: 5px 20px;
+	position: fixed;
+	bottom: 5px;
+	right: 20px;
+}
+noscript {
+	background-color: white;
+	colro: black;
 }
 
  /* ==========================================================================
