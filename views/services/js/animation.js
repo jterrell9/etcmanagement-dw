@@ -14,10 +14,9 @@ $(function(){
 	var services = $('#services');
 	services.delay(5000)
 			.slideDown(500);
-	var copyright = $('#copyright');
-	copyright.delay(5000)
-			.fadeIn(500);
-	
+//	var copyright = $('#copyright');
+//	copyright.delay(5000)
+//			.fadeIn(500);
 	var growthCell = $('#growth-cell');
 	var growthIcon = $('#growth-icon');
 	var growthText = $('#growth-text');
