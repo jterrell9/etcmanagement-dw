@@ -7,35 +7,36 @@
 require_once '../php/Artist_class.php';
 require_once '../php/roster_util.php';
 
-$name = 'Zubah';
+$name = 'Reklaim';
 $artist_type = array('Producer', 'DJ');
-$genres = array('Dubstep', 'Riddim', 'Heavy Bass', 'Hip Hop');
+$genres = array('Dubstep', 'Riddim', 'Heavy Bass');
 $social_media = array(
-	'Soundcloud' => 'https://soundcloud.com/dj-zubah',
-	'Spotify' => 'https://open.spotify.com/artist/2U4IvX2EBvfFfSTTajnxEE',
-	'Facebook' => 'https://www.facebook.com/zubahatl/',
-	'Instagram' => 'https://www.instagram.com/zubahatl/',
-	'Bowser Blockz (31k Plays)' => 'https://soundcloud.com/dj-zubah/zubah-bowserblockz-dub',
-	'Zubah In Montreal' => 'https://www.facebook.com/zubahatl/videos/565511913850271/',
-	'Squnto\'s Mega Chop' => 'https://www.facebook.com/squnto/videos/2166927823521820/',
+	'Soundcloud' => 'https://soundcloud.com/reklaimofficial',
+	'Spotify' => 'https://open.spotify.com/artist/1caQnVNKAa9ovojDIt8I1w?si=a0E2V3nSQ6G-DUopm-JGgw',
+	'Facebook' => 'https://www.facebook.com/reklaimofficial/',
+	'Instagram' => 'https://www.instagram.com/reklaimofficial/',
 	'Space Force EP' => 'https://soundcloud.com/reklaimofficial/sets/spaceforce-ep'
 );
 date_default_timezone_set('America/New_York');
 $bookings = array(
-	new Booking('Headlined Alpha Squadron\'s Bass Show', $date = mktime(0, 0, 0, 1, 0, 2019), date('F, Y', $date), 'Toronto, Canada'),
-	new Booking('Direct Support for Squnto', $date = mktime(0, 0, 0, 12, 0, 2018), date('F, Y', $date), 'Terminal West'),
-	new Booking('Iris Presents', $date = mktime(0, 0, 0, 1, 0, 2019), date('F Y', $date), 'Believe Music Hall'),
-	new Booking('Liquified Presents', $date = mktime(0, 0, 0, 2, 22, 2019), date('F j, Y', $date), 'District'),
-	new Booking('All Originals', $date = mktime(0, 0, 0, 2, 26, 2019), date('F j, Y', $date), 'Music Room')
+	new Booking('Elektrik Light', $date=mktime(0, 0, 0, 10, 26, 2018), date('F j, Y', $date), 'Capt’n Funs Pensacola'),
+	new Booking('Chop Shop', $date=mktime(0, 0, 0, 12, 12, 2018), date('F j, Y', $date), 'Believe Music Hall', 'Atlanta, GA'),
+	new Booking('Nightmare Before Christmas', $date=mktime(0, 0, 0, 12, 28, 2018), date('F j, Y', $date), 'District'),
+	new Booking('Iris NYE', $date=mktime(0, 0, 0, 12, 31, 2018), date('F j, Y', $date), 'Believe Music Hall', 'Atlanta, GA'),
+	new Booking('The Experience', $date=mktime(0, 0, 0, 1, 11, 2019), date('F j, Y', $date), 'Noir Lounge', 'Atlanta, GA'),
+	new Booking('Tukai Entertainment', $date=mktime(0, 0, 0, 1, 18, 2019), date('F j, Y', $date), 'Noir Lounge', 'Atlanta, GA'),
+	new Booking('404 Day', $date = mktime(0, 0, 0, 4, 4, 2019), date('F j, Y', $date)),
+	new Booking('Original Only Set', $date = mktime(0, 0, 0, 4, 0, 2019), date('F Y', $date), 'Music Room', 'Atlanta, GA'),
+	new Booking('Glowrage', $date = mktime(0, 0, 0, 4, 13, 2019), date('F j, Y', $date), 'The Firmament', 'Greenville, SC'),
+	new Booking('Headliner', $date = mktime(0, 0, 0, 4, 24, 2019), date('F j, Y', $date), 'Chill Lounge', 'Dothan, AL'),
 );
-$bio = 'INSERT ZUBAH BIO HERE';
+$bio = 'INSERT REKLAIM BIO HERE';
 $press_links = array (
-	'The QR Network, 10/22/2018' => "https://www.theqrnetwork.com/interviews/zubah",
-	'The Masquerade - Zubah' => "http://www.masqueradeatlanta.com/attraction/zubah/",
-	'Best Things in Georgia - Squnto and Zubah' => "https://bestthingsga.com/event/squnto-and-zubah-2018-11-08-jb-atlanta-ga.html"
+	'The Charlotte Sessions, Atlanta Producers Put Together New SPACE FORCE EP - 9/25/2018' => "http://thecharlottesessions.com/space-force-ep-is-fire/",
+	'Soundcloud, Interview in the description' => "https://soundcloud.com/prime-audio-1/zubah-ganons-minions-reklaim-rmx-prime-audio"
 );	
-$image_files = scan_photo_dir('../assets/zubah-img/');
-$zubah = new Artist($name, $artist_type, $genres, $social_media, $bookings, $bio, $press_links, $image_files);
-update_roster($zubah);
-echo "{$frankie_sinn->getStr_name()} artist roster successfully updated.";
+$image_files = scan_photo_dir('../assets/reklaim-img/');
+$reklaim = new Artist($name, $artist_type, $genres, $social_media, $bookings, $bio, $press_links, $image_files);
+update_roster($reklaim);
+echo "{$reklaim->getStr_name()} artist roster successfully updated.";
 ?>

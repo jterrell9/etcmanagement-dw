@@ -37,5 +37,5 @@ $press_links = array (
 $image_files = scan_photo_dir('../assets/zubah-img/');
 $zubah = new Artist($name, $artist_type, $genres, $social_media, $bookings, $bio, $press_links, $image_files);
 update_roster($zubah);
-echo "{$frankie_sinn->getStr_name()} artist roster successfully updated.";
+echo "{$zubah->getStr_name()} artist roster successfully updated.";
 ?>
