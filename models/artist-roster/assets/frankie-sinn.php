@@ -26,8 +26,8 @@ $bookings = array(
 	new Booking('Squnto (MC)', $date = mktime(0, 0, 0, 12, 0, 2018), date('F, Y', $date), 'Terminal West'),
 	new Booking('Shaky Beats', $date = mktime(0, 0, 0, 0, 0, 2018), date('Y', $date), 'Piedmont Stage'),
 	new Booking('Going Up', $date = mktime(0, 0, 0, 2, 26, 2019), date('F j, Y', $date), 'Music Room'),
-	new Booking('Iris Presents', $date = mktime(0, 0, 0, 12, 29, 2019), date('l', $date), 'Believe Music Hall', 'Resident MC'),
-	new Booking('404 Day', $date = mktime(0, 0, 0, 4, 4, 2019), date('F j, Y', $date), 'Venue TBA')
+	new Booking('Iris Presents', $date = mktime(0, 0, 0, 12, 28, 2019), date('l', $date), 'Believe Music Hall', 'Resident MC'),
+	new Booking('404 Day', $date = mktime(0, 0, 0, 4, 4, 2019), date('F j, Y', $date))
 );
 $bio = 'INSERT FRANKIE SINN BIO HERE';
 $press_links = array (
@@ -40,4 +40,5 @@ $press_links = array (
 $image_files = scan_photo_dir('../assets/frankie_sinn-img/');
 $frankie_sinn = new Artist($name, $artist_type, $genres, $social_media, $bookings, $bio, $press_links, $image_files);
 update_roster($frankie_sinn);
+echo "{$frankie_sinn->getStr_name()} artist roster successfully updated.";
 ?>

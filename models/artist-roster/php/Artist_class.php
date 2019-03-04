@@ -150,7 +150,7 @@ class Booking {
 	public $extra_info;
 	public $upcoming;
 	
-	public function __construct($event_name, $event_date, $formatted_date, $venue, $extra_info=NULL) {
+	public function __construct($event_name, $event_date, $formatted_date, $venue=NULL, $extra_info=NULL) {
 		$this->event_name = $event_name;
 		$this->event_date = $event_date;
 		$this->formatted_date = $formatted_date;
@@ -162,8 +162,11 @@ class Booking {
 	//function returns a formatted string for a booking
 	public function print_booking() {
 		$booking_str = '';
-		if(isset($this->event_name) and isset($this->venue)){
-			$booking_str .= $this->event_name.' | '.$this->venue;
+		if(isset($this->event_name)) {
+			$booking_str .= $this->event_name;
+		}
+		if(isset($this->venue)) {
+			$booking_str .= ' | '.$this->venue;
 		}
 		if(isset($this->event_date) and isset($this->formatted_date)) {
 			$booking_str .= ' | '.$this->formatted_date;
