@@ -41,9 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 20px;
 }
 #register-form input{
-/*	border: 1px solid white;*/
 	border-style: none;
-/*	background-color: #3C3C3C;*/
 	background-color: white;
 	color: black;
 	font-family: Monospace;
@@ -54,18 +52,11 @@ h1, h2, h3, h4, h5, h6 {
 #register-form button{
 	margin: 20px 0px 10px 20px;
 	padding: 5px 10px;
-/*
-	background-image: linear-gradient(180deg,
-        #626262, 
-        #7D7D7D 80%,
-        #CFCFCF );
-*/
 	background-color: #FF6F61;
 	width: 200px;
 	height: 30px;
 	color: white;
 	border: none;
-/*	border-radius: 5px;*/
 }
 #register-form button:hover{
 	border: 1px solid white;
