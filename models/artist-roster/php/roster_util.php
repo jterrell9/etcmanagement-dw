@@ -16,6 +16,16 @@ function update_roster($artist) {
 	persist_artist($artist, $filename);
 }
 
+//this function returns an array of Artists of all the artists in roster
+function getArtists_array() {
+	$rosters = getRoster_filenames();
+	$srtists = array();
+	foreach($rosters as $roster) {
+		$artists[] = deserialize_artist('../assets/'.$roster);
+	}
+	return $artists;
+}
+
 //this function returns the filename of the roster file
 //@param $artist_name: artist name string
 function get_roster_filename($artist_name) {
