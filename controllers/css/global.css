@@ -109,14 +109,19 @@ a:visited{
 	color: inherit;
 }
 body{
+	background-color: black;
 	margin: 0px;
 	background-repeat: no-repeat;
     background-size: 100%;
 	background-attachment: fixed;
 	font-family: "Montserrat", sans-serif;
 }
-nav {
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+nav.navigation {
 	display: none;
+	overflow: hidden;
 	position: fixed;
 	top: 0px;
 	width: 100%;
@@ -127,6 +132,11 @@ nav {
 	background: linear-gradient(135deg, #ffd4d1 0%,#ff6f61 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd4d1', endColorstr='#ff6f61',GradientType=1 );
 	text-align: right;
+}
+nav #homebutton{
+	font-size: 40px; 
+	text-align: left; 
+	margin-left: 10px;
 }
 nav ul{
 	margin: 0;
@@ -141,11 +151,6 @@ nav li{
 nav li:hover{
 	cursor: pointer;
 	color: white;
-}
-nav #homebutton{
-	font-size: 40px; 
-	text-align: left; 
-	margin-left: 10px;
 }
 footer {
 	opacity: .5;
